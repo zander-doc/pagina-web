@@ -21,13 +21,96 @@
     <!-- CSS optimizado -->
     <link rel="stylesheet" href="assets/css/main.min.css">
     <style>
-        /* Desactiva cualquier CSS heredado de otros archivos */
-        @import url("assets/css/sections/hero.css") layer(disabled);
-        @import url("assets/css/header.css") layer(disabled);
-        @import url("assets/css/main.css") layer(disabled);
-        @import url("assets/css/selections/header.css") layer(disabled);
+        /* ============= HERO SECTION ============= */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+            background: #000;
+            overflow: hidden;
+            position: relative;
+        }
 
-        /* Estilos del video YouTube embed (no se ven afectados por layer disabled) */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.0);
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+            padding: 40px 0;
+        }
+
+        .hero-text {
+            flex: 0 0 42%;
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            margin: 0 0 25px 0;
+            line-height: 1.1;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-tagline {
+            font-size: 16px;
+            letter-spacing: 4px;
+            color: #f47b20;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-subtitle {
+            font-size: 38px;
+            color: #ffd700;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            color: #ccc;
+            font-size: 19px;
+            line-height: 1.8;
+            margin: 25px 0 40px 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Video YouTube */
         .hero-video-container {
             position: absolute;
             top: 0;
@@ -37,6 +120,7 @@
             overflow: hidden;
             z-index: 0;
         }
+
         .hero-video-iframe {
             position: absolute;
             top: 50%;
@@ -47,6 +131,61 @@
             min-width: 177.77vh;
             transform: translate(-50%, -50%);
             pointer-events: none;
+            filter: brightness(3) contrast(1.2) saturate(1.3);
+        }
+
+        @media (max-width: 960px) {
+            .hero-section {
+                padding: 100px 20px 80px 20px;
+                min-height: auto;
+            }
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+                padding: 0;
+            }
+            .hero-text {
+                flex: 1;
+                max-width: 100%;
+            }
+            .hero-image {
+                flex: 1;
+                max-width: 450px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-title {
+                font-size: 42px;
+            }
+            .hero-subtitle {
+                font-size: 26px;
+            }
+            .hero-description {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-section {
+                padding: 80px 16px 60px 16px;
+            }
+            .hero-title {
+                font-size: 34px;
+            }
+            .hero-subtitle {
+                font-size: 22px;
+            }
+            .hero-description {
+                font-size: 15px;
+            }
+            .hero-image {
+                max-width: 320px;
+            }
         }
     </style>
 </head>
