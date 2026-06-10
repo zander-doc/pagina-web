@@ -1,0 +1,91 @@
+.landscaping-section{
+  width:100%;
+  padding:100px 80px;
+  background:var(--bg);
+  color:#fff;
+}
+
+.landscaping-section .container{
+  max-width:var(--max-width);
+  margin:auto;
+  text-align:center;
+}
+
+.landscaping-section h2{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.landscaping-subtitle{
+  font-size:18px;
+  color:var(--muted);
+  max-width:750px;
+  margin:0 auto 40px auto;
+  line-height:1.7;
+}
+
+/* GRID */
+.landscaping-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.landscaping-card{
+  background:var(--card);
+  border:1px solid var(--accent);
+  border-radius:12px;
+  padding:20px;
+  transition:0.3s;
+  box-shadow:0 0 20px rgba(26,115,232,0.15);
+}
+
+.landscaping-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 30px rgba(26,115,232,0.35);
+}
+
+.landscaping-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+.landscaping-card h3{
+  font-size:22px;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+
+.landscaping-card p{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* TEXTO FINAL */
+.landscaping-extra{
+  margin-top:40px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.landscaping-extra p{
+  font-size:18px;
+  color:#dddddd;
+  line-height:1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .landscaping-section{
+    padding:80px 24px;
+  }
+  .landscaping-grid{
+    grid-template-columns:1fr;
+  }
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - ADDBOX Constructora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de administración para gestión de proyectos, clientes y contenido de ADDBOX Constructora.">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/pages/admin.css">
+</head>
+<body class="admin-body">
+
+    <!-- LOGIN (visible por defecto, se oculta después del login) -->
+    <section class="login-section" id="loginSection">
+        <div class="login-container">
+            <div class="login-logo">
+                <img src="assets/img/logo/logo-2_1.png" alt="ADDBOX Constructora">
+            </div>
+            
+            <h1 class="login-title">Panel de Administración</h1>
+            <p class="login-subtitle">Ingresa tus credenciales para continuar</p>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Correo electrónico</label>
+                    <input type="email" id="adminEmail" name="email" required placeholder="admin@addbox.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Contraseña</label>
+                    <input type="password" id="adminPassword" name="password" required placeholder="••••••••">
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="rememberMe" name="remember">
+                    <label for="rememberMe">Recordarme</label>
+                </div>
+
+                <button type="submit" class="btn btn-orange btn-full">
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </button>
+            </form>
+
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al sitio
+            </a>
+        </div>
+    </section>
+
+    <!-- DASHBOARD (oculto por defecto, se muestra después del login) -->
+    <section class="dashboard-section" id="dashboardSection" style="display: none;">
+        
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/logo/logo-2_1.png" alt="ADDBOX">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="proyectos">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>Proyectos</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="clientes">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="contenido">
+                    <i class="fas fa-edit"></i>
+                    <span>Contenido</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="mensajes">
+                    <i class="fas fa-envelope"></i>
+                    <span>Mensajes</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="configuracion">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="admin-page-title">Dashboard</h1>
+                </div>
+                <div class="admin-header-right">
+                    <div class="admin-user">
+                        <span>Administrador</span>
+                        <img src="assets/img/general/Digital_for_Website_1024x1024.webp" alt="Admin">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="admin-content" id="dashboardContent">
+                
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">12</h3>
+                            <p class="stat-label">Proyectos Activos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">48</h3>
+                            <p class="stat-label">Clientes</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">36</h3>
+                            <p class="stat-label">Proyectos Completados</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon yellow">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">8</h3>
+                            <p class="stat-label">Mensajes Nuevos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Projects -->
+                <div class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Proyectos Recientes</h2>
+                        <button class="btn btn-orange btn-sm">
+                            <i class="fas fa-plus"></i> Nuevo Proyecto
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Proyecto</th>
+                                    <th>Cliente</th>
+                                    <th>Estado</th>
+                                    <th>Progreso</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Residencia Los Olivos</td>
+                                    <td>Carlos Mendoza</td>
+                                    <td><span class="badge badge-success">Completado</span></td>
+                                    <td>
+                                        <div class="progress-mini">
+                                            <div class="progress-fill" style="width: 100%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Condominio Vista Hermosa</td>
+                                    <td>María Rodríguez</td>
+                                    <td><span class="badge badge-warning">En Progreso</span></td>
+                                    <td>
+                                        <div class="progress-mini">
+                                            <div class="progress-fill" style="width: 65%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Parque Empresarial</td>
+                                    <td>Luis Fernández</td>
+                                    <td><span class="badge badge-warning">En Progreso</span></td>
+                                    <td>
+                                        <div class="progress-mini">
+                                            <div class="progress-fill" style="width: 40%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Messages -->
+                <div class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Mensajes Recientes</h2>
+                        <a href="#" class="btn btn-ghost btn-sm">Ver todos</a>
+                    </div>
+
+                    <div class="messages-list">
+                        <div class="message-item">
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4>Juan Pérez</h4>
+                                <p>Solicito información sobre construcción de...</p>
+                                <span class="message-date">Hace 2 horas</span>
+                            </div>
+                        </div>
+
+                        <div class="message-item">
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4>Ana Gómez</h4>
+                                <p>Quisiera un presupuesto para remodelar...</p>
+                                <span class="message-date">Hace 5 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <!-- Placeholder para footer dinámico -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="assets/js/bundle.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

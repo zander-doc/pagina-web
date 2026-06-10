@@ -1,0 +1,19 @@
+========================================================================
+RESUMEN DE PROGRESO - PROYECTO ADDBOX (CONEXIÓN CONTINUE + GROQ)
+========================================================================
+
+CONTEXTO DEL PROYECTO:
+- Sitio web estático (HTML/CSS/JS) en desarrollo local.
+- Se integrará un panel de administración (admin.html) conectado a un sistema de gestión empresarial (futuro Supabase).
+- Los archivos JS principales (main.js, header.js, contacto.js y footer-anim.js) están limpios y validados sin errores de duplicación. El diseño original en VS Code está intacto.
+
+ENTORNO DE IA CONFIGURADO:
+- Se descartó Dyad por bloqueos visuales y límites de cuota de Gemini.
+- Se configuró con éxito la extensión CONTINUE en VS Code usando el proveedor GROQ.
+- El modelo activo y funcionando es Llama 3.3 (70B) mediante OpenRouter/Groq (Ilimitado y gratuito).
+
+PRÓXIMO PASO (DONDE RETOMAR):
+1. Abrir el chat de Continue en VS Code.
+2. Adjuntar el archivo `@index.html`.
+3. Pedir el código específico para transformar la sección de Landscaping (clase `land-card`) en un contenedor dinámico inyectado por JavaScript.
+4. Conectar esta lógica con `admin.html` para crear las funciones de agregar/quitar imágenes para la galería.

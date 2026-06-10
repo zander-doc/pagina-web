@@ -1,0 +1,96 @@
+/* =============================================
+   PROCESO SECTION
+   ============================================= */
+
+.proceso-section {
+    padding: 80px 40px;
+    background: #000;
+}
+
+.proceso-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.proceso-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.proceso-subtitle {
+    text-align: center;
+    color: var(--gris);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.proceso-video-card {
+    background: var(--gris-oscuro);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.proceso-ia-card {
+    background: linear-gradient(135deg, rgba(8, 114, 250, 0.1), rgba(255, 176, 0, 0.05));
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    border: 1px solid rgba(8, 114, 250, 0.2);
+}
+
+.ia-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+}
+
+.ia-title {
+    font-size: 26px;
+    color: var(--amarillo);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ia-subtitle {
+    color: var(--gris);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .proceso-section {
+        padding: 60px 20px;
+    }
+    
+    .proceso-ia-card {
+        padding: 30px 20px;
+    }
+}

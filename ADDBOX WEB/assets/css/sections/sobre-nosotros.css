@@ -1,0 +1,81 @@
+/* =============================================
+   SOBRE NOSOTROS SECTION
+   ============================================= */
+
+.sobre-nosotros-section {
+    padding: 80px 40px;
+    background: #fff;
+    color: #000;
+}
+
+.sn-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.sn-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 700;
+}
+
+.sn-description {
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.sn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sn-card {
+    background: #f5f5f5;
+    border-radius: var(--radius);
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 99, 3, 0.2);
+}
+
+.sn-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--naranja);
+    box-shadow: 0 15px 40px rgba(255, 99, 3, 0.15);
+}
+
+.sn-icon {
+    width: 60px;
+    height: auto;
+    margin: 0 auto 15px auto;
+}
+
+.sn-card-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--naranja);
+    font-weight: 600;
+}
+
+.sn-card-text {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .sn-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-nosotros-section {
+        padding: 60px 20px;
+    }
+}

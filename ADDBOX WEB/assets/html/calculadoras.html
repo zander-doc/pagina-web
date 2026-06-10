@@ -1,0 +1,203 @@
+<!-- CALCULADORA DE REMODELACIÓN -->
+<div id="calc-remodelacion-content" class="calc-wrapper">
+
+    <h2 class="calc-title">Calculadora de Presupuesto</h2>
+    <p class="calc-subtitle">Obtén un estimado rápido para tu proyecto con ADDBOX.</p>
+
+    <form id="calc-form-remodelacion" class="calc-form">
+        
+        <div class="field">
+            <label for="tipo-remodelacion">Tipo de proyecto</label>
+            <select id="tipo-remodelacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="remodelacion">Remodelación (cocina, baño, área)</option>
+                <option value="ampliacion">Ampliación / Home Addition</option>
+                <option value="mantenimiento">Mantenimiento / Reparaciones</option>
+                <option value="construccion">Construcción nueva</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="metros-remodelacion">Metros cuadrados aproximados</label>
+            <input type="number" id="metros-remodelacion" min="1" step="1" placeholder="Ej: 25" required />
+            <p class="hint">No tiene que ser exacto, solo una referencia.</p>
+        </div>
+
+        <div class="field">
+            <label for="acabado-remodelacion">Nivel de acabado</label>
+            <select id="acabado-remodelacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="basico">Básico (funcional, económico)</option>
+                <option value="estandar">Estándar (buena calidad)</option>
+                <option value="premium">Premium (alto nivel de detalle)</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="urgencia-remodelacion">Urgencia del proyecto</label>
+            <select id="urgencia-remodelacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="normal">Flexible / Normal</option>
+                <option value="rapido">Rápido (prioridad alta)</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-orange">Calcular presupuesto estimado</button>
+    </form>
+
+    <div id="result-rem" class="result" style="display:none;">
+        <div class="result-title">Presupuesto estimado:</div>
+        <div class="result-value" id="result-value-rem">$0 – $0</div>
+        <div class="result-note" id="result-note-rem">
+            Este es un rango aproximado. El valor final puede variar según materiales, permisos y condiciones del sitio.
+        </div>
+
+        <div class="cta">
+            ¿Quieres un presupuesto detallado?
+            <strong>
+                <a href="https://wa.me/584127706026?text=Hola%20ADDBOX%2C%20quiero%20un%20presupuesto%20detallado.%20Tengo%20fotos%20de%20mi%20proyecto%20y%20quiero%20compartirlas.%20📷"
+                   target="_blank"
+                   style="color:#38bdf8; text-decoration:none;">
+                   Envíanos fotos o agenda una visita técnica
+                </a>
+            </strong>
+        </div>
+    </div>
+
+</div>
+
+<!-- Calculadora de Construcción -->
+<div id="calc-construccion-content" style="display:none;">
+    <div class="container">
+        <h1>Calculadora de Construcción de Vivienda</h1>
+        <p class="subtitle">Estimación rápida del costo de construcción en Venezuela.</p>
+        <div class="grid">
+            <!-- Formulario -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Datos del proyecto</div>
+                    <div class="card-tag">Entrada</div>
+                </div>
+                <form id="calc-form-construccion">
+                    <div class="section">
+                        <div class="section-title">1. Información general</div>
+                        <div class="field">
+                            <label for="area-construccion">Área construida aproximada (m²)</label>
+                            <input type="number" id="area-construccion" min="1" step="1" placeholder="Ej: 120" required />
+                            <div class="hint">Superficie total de la vivienda a construir.</div>
+                        </div>
+                        <div class="inline">
+                            <div class="field">
+                                <label for="niveles-construccion">Número de niveles</label>
+                                <input type="number" id="niveles-construccion" min="1" step="1" value="1">
+                                <div class="hint">Plantas o pisos de la vivienda.</div>
+                            </div>
+                            <div class="field">
+                                <label for="calidad-construccion">Calidad de construcción</label>
+                                <select id="calidad-construccion">
+                                    <option value="economica">Económica</option>
+                                    <option value="estandar" selected>Estándar</option>
+                                    <option value="premium">Premium</option>
+                                </select>
+                                <div class="hint">Afecta el costo base por m².</div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="ubicacion-construccion">Ubicación / Ciudad</label>
+                            <select id="ubicacion-construccion">
+                                <option value="1">Caracas (1.00)</option>
+                                <option value="0.9">Maracay / Valencia (0.90)</option>
+                                <option value="0.85">Barquisimeto / Maracaibo (0.85)</option>
+                                <option value="0.8">Interior del país (0.80)</option>
+                            </select>
+                            <div class="hint">Factor según disponibilidad de materiales y mano de obra.</div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">2. Costos directos por m² (automáticos)</div>
+                        <p class="hint">Estos valores se calculan automáticamente según la calidad seleccionada.</p>
+                        <div class="field">
+                            <label>Materiales por m² (USD)</label>
+                            <input type="number" id="materiales-construccion" readonly style="opacity:0.7;">
+                        </div>
+                        <div class="field">
+                            <label>Mano de obra por m² (USD)</label>
+                            <input type="number" id="mano_obra-construccion" readonly style="opacity:0.7;">
+                        </div>
+                        <div class="field">
+                            <label>Otros costos por m² (USD)</label>
+                            <input type="number" id="otros-construccion" readonly style="opacity:0.7;">
+                        </div>
+                        <label style="display:flex; align-items:center; gap:8px; margin-top:8px;">
+                            <input type="checkbox" id="manualToggle-construccion">Ingresar valores manualmente
+                        </label>
+                        <div class="hint">Solo para usuarios con experiencia en costos.</div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">3. Porcentajes adicionales</div>
+                        <div class="inline">
+                            <div class="field">
+                                <label for="indirectos-construccion">% Gastos indirectos</label>
+                                <input type="number" id="indirectos-construccion" value="10">
+                            </div>
+                            <div class="field">
+                                <label for="utilidad-construccion">% Utilidad</label>
+                                <input type="number" id="utilidad-construccion" value="15">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="contingencia-construccion">% Contingencia</label>
+                            <input type="number" id="contingencia-construccion" value="5">
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">4. Tipo de cambio</div>
+                        <div class="inline">
+                            <div class="field">
+                                <label for="tasa-construccion">Tasa (Bs/USD)</label>
+                                <input type="number" id="tasa-construccion" placeholder="Ej: 40">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning" id="warning-construccion">Debes ingresar valores válidos.</div>
+                    <button type="submit">Calcular costo de construcción</button>
+                </form>
+            </div>
+            <!-- Panel de Resultados -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Resultado estimado</div>
+                    <div class="card-tag">Desglose</div>
+                </div>
+                <div id="result-construccion">
+                    <div class="result-main" id="total-usd-construccion">$0</div>
+                    <div class="result-sub" id="total-bs-construccion">Equivalente en bolívares: —</div>
+                    <div class="section">
+                        <div class="section-title">Desglose de costos</div>
+                        <div class="result-row"><span>Área total:</span><span id="r-area-construccion">0 m²</span></div>
+                        <div class="result-row"><span>Costo directo por m²:</span><span id="r-directo-m2-construccion">$0</span></div>
+                        <div class="result-row"><span>Costo directo total:</span><span id="r-directo-total-construccion">$0</span></div>
+                        <div class="result-row"><span>Gastos indirectos:</span><span id="r-indirectos-construccion">$0</span></div>
+                        <div class="result-row"><span>Contingencia:</span><span id="r-contingencia-construccion">$0</span></div>
+                        <div class="result-row"><span>Utilidad:</span><span id="r-utilidad-construccion">$0</span></div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Costo final por m²</div>
+                        <div class="result-row"><span>Total por m² (USD):</span><span id="r-total-m2-usd-construccion">$0</span></div>
+                        <div class="result-row"><span>Total por m² (Bs):</span><span id="r-total-m2-bs-construccion">—</span></div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Resumen rápido</div>
+                        <span class="pill">Área: <span id="pill-area-construccion">0 m²</span></span>
+                        <span class="pill">Calidad: <span id="pill-calidad-construccion">—</span></span>
+                        <span class="pill">Ubicación: <span id="pill-ubicacion-construccion">—</span></span>
+                    </div>
+                    <p class="note">Estimación referencial basada en costos típicos de obra en Venezuela.</p>
+                    <div class="cta">¿Quieres un presupuesto detallado? <strong><a href="https://wa.me/584127706026?text=Hola%20ADDBOX%2C%20quiero%20un%20presupuesto%20detallado.%20Tengo%20fotos%20de%20mi%20proyecto%20y%20quiero%20compartirlas.%20%F0%9F%93%B7" target="_blank" rel="noopener noreferrer" style="color:#c57622; text-decoration:none;">Envíanos fotos de tu proyecto o agenda una visita técnica por WhatsApp: +58 412-7706026</a></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

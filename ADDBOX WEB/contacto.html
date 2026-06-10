@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - ADDBOX Constructora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para tu próximo proyecto de construcción o remodelación. Formulario de contacto, WhatsApp, email y ubicación.">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/icons/logo-addbox-icon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/pages/contacto.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo">
+                <img src="assets/img/logo/logo-2_1.png" alt="ADDBOX Constructora">
+            </a>
+
+            <nav class="header-nav" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca-de.html">Sobre nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO INTERNO -->
+    <section class="page-hero">
+        <div class="page-hero-container">
+            <h1 class="page-hero-title" data-animate="fade-up">Contacto</h1>
+            <p class="page-hero-subtitle" data-animate="fade-up">
+                Estamos listos para hacer realidad tu proyecto
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACTO PRINCIPAL -->
+    <section class="contact-section">
+        <div class="contact-container">
+            
+            <!-- Formulario -->
+            <div class="contact-form-wrapper" data-animate="fade-left">
+                <h2 class="contact-form-title">Envíanos un mensaje</h2>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+58 412 XXX XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés</label>
+                        <select id="servicio" name="servicio">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="construccion">Construcción</option>
+                            <option value="remodelacion">Remodelación</option>
+                            <option value="arquitectura">Arquitectura</option>
+                            <option value="ingenieria">Ingeniería</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="render">Render 3D</option>
+                            <option value="supervision">Supervisión de Obra</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-orange btn-full">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+
+            <!-- Info de contacto -->
+            <div class="contact-info-wrapper" data-animate="fade-right">
+                
+                <!-- WhatsApp -->
+                <div class="contact-info-card whatsapp-card">
+                    <div class="contact-info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Respuesta inmediata</p>
+                    <a href="https://wa.me/584127706026" target="_blank" rel="noopener noreferrer" class="btn btn-green">
+                        Chatear Ahora
+                    </a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-info-card email-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Correo Electrónico</h3>
+                    <p>addboxllc.constructora.2026@gmail.com</p>
+                    <a href="mailto:addboxllc.constructora.2026@gmail.com" class="btn btn-blue">
+                        Enviar Email
+                    </a>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="contact-info-card phone-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p>+58 412 770 6026</p>
+                    <a href="tel:+584127706026" class="btn btn-ghost">
+                        Llamar Ahora
+                    </a>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="contact-info-card location-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Venezuela</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section class="hours-section">
+        <div class="hours-container" data-animate="fade-up">
+            <h2 class="hours-title">Horarios de Atención</h2>
+            
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <span class="hours-day">Lunes a Viernes</span>
+                    <span class="hours-time">8:00 AM - 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="hours-day">Sábados</span>
+                    <span class="hours-time">9:00 AM - 2:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="hours-day">Domingos</span>
+                    <span class="hours-time">Cerrado</span>
+                </div>
+            </div>
+
+            <p class="hours-note">
+                <i class="fas fa-info-circle"></i>
+                Para emergencias, contáctanos por WhatsApp las 24 horas.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="map-section">
+        <div class="map-container" data-animate="fade-up">
+            <h2 class="section-title center">Nuestra Ubicación</h2>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6220566.459784478!2d-69.3763365!3d7.1254735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5888b5c8c0c8c1%3A0x8c8c8c8c8c8c8c8c!2sVenezuela!5e0!3m2!1ses!2s!4v1620000000000!5m2!1ses!2s" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder para footer dinámico -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="assets/js/bundle.min.js"></script>
+    <script src="assets/js/contacto.js"></script>
+</body>
+</html>

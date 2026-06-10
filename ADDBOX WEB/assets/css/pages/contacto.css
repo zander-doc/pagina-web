@@ -1,0 +1,284 @@
+/* =============================================
+   PÁGINA CONTACTO - ESTILOS
+   ============================================= */
+
+/* Hero Interno */
+.page-hero {
+    padding: 120px 40px 80px 40px;
+    background: linear-gradient(135deg, var(--negro) 0%, #0d0d0d 100%);
+    text-align: center;
+}
+
+.page-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.page-hero-subtitle {
+    font-size: 20px;
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 40px;
+    background: var(--negro);
+}
+
+.contact-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* Form */
+.contact-form-wrapper {
+    background: var(--gris-oscuro);
+    border-radius: var(--radius);
+    padding: 40px;
+}
+
+.contact-form-title {
+    font-size: 28px;
+    color: var(--blanco);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--negro);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--blanco);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--naranja);
+    box-shadow: 0 0 0 3px rgba(255, 99, 3, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #666;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Info Cards */
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-info-card {
+    background: var(--gris-oscuro);
+    border-radius: var(--radius);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 24px;
+}
+
+.contact-info-card h3 {
+    font-size: 18px;
+    color: var(--blanco);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-info-card p {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.whatsapp-card .contact-info-icon {
+    background: #25D366;
+    color: var(--blanco);
+}
+
+.email-card .contact-info-icon {
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.phone-card .contact-info-icon {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.location-card .contact-info-icon {
+    background: var(--amarillo);
+    color: var(--negro);
+}
+
+.btn-green {
+    background: #25D366;
+    color: var(--blanco);
+    border: 2px solid #25D366;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-green:hover {
+    background: #1da851;
+    border-color: #1da851;
+}
+
+/* Hours Section */
+.hours-section {
+    padding: 60px 40px;
+    background: var(--gris-oscuro);
+}
+
+.hours-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hours-title {
+    font-size: 28px;
+    color: var(--blanco);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: var(--negro);
+    border-radius: 8px;
+}
+
+.hours-day {
+    color: var(--blanco);
+    font-weight: 500;
+}
+
+.hours-time {
+    color: var(--naranja);
+    font-weight: 600;
+}
+
+.hours-note {
+    color: var(--gris);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.hours-note i {
+    color: var(--azul);
+    margin-right: 8px;
+}
+
+/* Map Section */
+.map-section {
+    padding: 60px 40px;
+    background: var(--negro);
+}
+
+.map-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.map-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section,
+    .hours-section,
+    .map-section {
+        padding: 60px 20px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .contact-info-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-hero-title {
+        font-size: 36px;
+    }
+}
