@@ -159,7 +159,7 @@
     min-width: 177.77vh;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    filter: brightness(1.8) contrast(1.1);
+    filter: brightness(3) contrast(1.2) saturate(1.3);
 }
 
 @media (max-width: 600px) {
