@@ -134,6 +134,12 @@
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+        /* Reset para otras secciones */
+        .historia-section ~ section {
+            padding: 80px 0;
+            background: transparent;
+        }
+
         @media (max-width: 968px) {
             .historia-content { grid-template-columns: 1fr; gap: 60px; }
             .historia-texto h2 { font-size: 2.2rem; }
@@ -190,7 +196,7 @@
                     <p>A lo largo de los años, hemos crecido de ser un pequeño equipo a una empresa consolidada, reconocida por nuestra profesionalismo, innovación y dedicación a cada proyecto que emprendemos.</p>
                     <div class="historia-stats">
                         <div class="stat-item">
-                            <h3 class="stat-number" data-target="10">0</h3>
+                            <h3 class="stat-number" data-target="20">0</h3>
                             <p>Años de experiencia</p>
                         </div>
                         <div class="stat-item">
@@ -198,7 +204,7 @@
                             <p>Proyectos completados</p>
                         </div>
                         <div class="stat-item">
-                            <h3 class="stat-number" data-target="100">0</h3>
+                            <h3 class="stat-number" data-target="300">0</h3>
                             <p>Clientes satisfechos</p>
                         </div>
                     </div>
