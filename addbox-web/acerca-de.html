@@ -15,141 +15,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.min.css">
-    <style>
-        /* Historia Premium */
-        .historia-section {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .historia-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(255, 99, 3, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 99, 3, 0.03) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        .historia-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        .historia-badge {
-            display: inline-block;
-            padding: 8px 24px;
-            background: rgba(255, 99, 3, 0.15);
-            border: 2px solid #ff6303;
-            border-radius: 50px;
-            color: #ff6303;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .historia-texto h2 {
-            font-size: 3rem;
-            margin-bottom: 30px;
-            color: #ffffff;
-            font-weight: 700;
-            position: relative;
-            line-height: 1.2;
-        }
-        .historia-texto h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 100px;
-            height: 5px;
-            background: linear-gradient(90deg, #ff6303 0%, #ff8c42 100%);
-            border-radius: 3px;
-        }
-        .historia-texto p {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: #b0b0b0;
-            margin-bottom: 25px;
-        }
-        .historia-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 50px 0;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 99, 3, 0.3);
-            border-bottom: 1px solid rgba(255, 99, 3, 0.3);
-        }
-        .stat-item { text-align: center; padding: 20px; }
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #ff6303;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-        .stat-item p {
-            font-size: 0.95rem;
-            color: #888;
-            margin: 0;
-            font-weight: 500;
-        }
-        .btn-premium {
-            display: inline-block;
-            padding: 18px 45px;
-            background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
-            border: 2px solid transparent;
-        }
-        .btn-premium:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 99, 3, 0.5);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 99, 3, 0.2);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border-radius: 20px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        /* Reset para otras secciones */
-        .historia-section ~ section {
-            padding: 80px 0;
-            background: transparent;
-        }
-
-        @media (max-width: 968px) {
-            .historia-content { grid-template-columns: 1fr; gap: 60px; }
-            .historia-texto h2 { font-size: 2.2rem; }
-            .historia-stats { grid-template-columns: 1fr; gap: 20px; }
-            .stat-number { font-size: 2.5rem; }
-            .historia-section { padding: 80px 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/pages/acerca.css">
 </head>
-<body>
+<body class="acerca-de-page">
 
     <!-- HEADER -->
     <header class="header">
@@ -200,7 +68,7 @@
                             <p>Años de experiencia</p>
                         </div>
                         <div class="stat-item">
-                            <h3 class="stat-number" data-target="150">0</h3>
+                            <h3 class="stat-number" data-target="1150">0</h3>
                             <p>Proyectos completados</p>
                         </div>
                         <div class="stat-item">
