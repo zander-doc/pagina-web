@@ -190,6 +190,37 @@
                 max-width: 320px;
             }
         }
+
+        /* ============= PROCESO SECTION ============= */
+        .proceso-video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .proceso-video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 960px) {
+            .proceso-video-container {
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .proceso-video-container {
+                border-radius: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -313,11 +344,8 @@
             </p>
 
             <div class="proceso-video-card" data-animate="fade-up">
-                <div class="video-wrapper">
-                    <video id="videoProceso" controls poster="assets/img/proceso/poster.jpg">
-                        <source src="assets/video/proceso.mp4" type="video/mp4">
-                        Tu navegador no soporta video HTML5.
-                    </video>
+                <div class="proceso-video-container">
+                    <iframe src="https://www.youtube.com/embed/0Q605Km8NvY?autoplay=1&mute=1&loop=1&playlist=0Q605Km8NvY&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="proceso-video-iframe"></iframe>
                 </div>
             </div>
 
