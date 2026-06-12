@@ -1,27 +1,7 @@
 /* Reset general para esta página */
 .acerca-de-page { font-family: 'Roboto', sans-serif; }
 
-/* Hero integrado en Historia */
-.acerca-de-page .historia-hero-content {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid rgba(255, 99, 3, 0.3);
-}
-.acerca-de-page .historia-hero-title {
-    font-size: 3.5rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-.acerca-de-page .historia-hero-subtitle {
-    font-size: 1.3rem;
-    color: #b0b0b0;
-    margin: 0;
-    font-weight: 300;
-}
-
-/* Historia Premium */
+/* Historia Premium Centrada */
 .acerca-de-page .historia-section {
     padding: 120px 0;
     background: linear-gradient(135deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
@@ -36,11 +16,27 @@
                 radial-gradient(circle at 80% 80%, rgba(255, 99, 3, 0.03) 0%, transparent 50%);
     pointer-events: none;
 }
+.acerca-de-page .historia-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.acerca-de-page .historia-main-title {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.acerca-de-page .historia-main-subtitle {
+    font-size: 1.4rem;
+    color: #b0b0b0;
+    margin: 0;
+    font-weight: 300;
+}
 .acerca-de-page .historia-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
     position: relative;
     z-index: 1;
 }
@@ -57,43 +53,48 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.acerca-de-page .historia-texto h2 {
+.acerca-de-page .historia-subtitle {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #ffffff;
     font-weight: 700;
     position: relative;
     line-height: 1.2;
-    margin-top: 40px;
 }
-.acerca-de-page .historia-texto h2::after {
+.acerca-de-page .historia-subtitle::after {
     content: '';
     position: absolute;
     bottom: -15px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
     height: 5px;
     background: linear-gradient(90deg, #ff6303 0%, #ff8c42 100%);
     border-radius: 3px;
 }
-.acerca-de-page .historia-texto p {
+.acerca-de-page .historia-texto-center {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+.acerca-de-page .historia-texto-center p {
     font-size: 1.15rem;
     line-height: 1.9;
     color: #b0b0b0;
     margin-bottom: 25px;
+    text-align: center;
 }
 .acerca-de-page .historia-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 50px 0;
+    margin: 60px 0;
     padding: 40px 0;
     border-top: 1px solid rgba(255, 99, 3, 0.3);
     border-bottom: 1px solid rgba(255, 99, 3, 0.3);
 }
 .acerca-de-page .stat-item { text-align: center; padding: 20px; }
 .acerca-de-page .stat-number {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #ff6303;
     margin-bottom: 10px;
@@ -105,24 +106,9 @@
     margin: 0;
     font-weight: 500;
 }
-.acerca-de-page .btn-premium {
-    display: inline-block;
-    padding: 18px 45px;
-    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
-    border: 2px solid transparent;
-}
-.acerca-de-page .btn-premium:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 99, 3, 0.5);
-    border-color: rgba(255, 255, 255, 0.3);
+.acerca-de-page .historia-video-wrapper {
+    max-width: 800px;
+    margin: 60px auto;
 }
 .acerca-de-page .video-container {
     position: relative;
@@ -137,6 +123,27 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     border-radius: 20px;
+}
+.acerca-de-page .historia-cta {
+    margin-top: 50px;
+}
+.acerca-de-page .btn-premium {
+    display: inline-block;
+    padding: 18px 45px;
+    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
+    border: 2px solid transparent;
+}
+.acerca-de-page .btn-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 99, 3, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Equipo */
@@ -286,13 +293,13 @@
 
 /* Responsive */
 @media (max-width: 968px) {
-    .acerca-de-page .historia-content { grid-template-columns: 1fr; gap: 60px; }
-    .acerca-de-page .historia-hero-title { font-size: 2.5rem; }
-    .acerca-de-page .historia-hero-subtitle { font-size: 1.1rem; }
-    .acerca-de-page .historia-texto h2 { font-size: 2.2rem; }
+    .acerca-de-page .historia-main-title { font-size: 2.8rem; }
+    .acerca-de-page .historia-main-subtitle { font-size: 1.2rem; }
+    .acerca-de-page .historia-subtitle { font-size: 2rem; }
     .acerca-de-page .historia-stats { grid-template-columns: 1fr; gap: 20px; }
     .acerca-de-page .stat-number { font-size: 2.5rem; }
     .acerca-de-page .historia-section { padding: 80px 0; }
+    .acerca-de-page .historia-header { margin-bottom: 50px; }
     .acerca-de-page .team-grid { grid-template-columns: 1fr; }
     .acerca-de-page .philosophy-grid { grid-template-columns: 1fr; }
     .acerca-de-page .section-title { font-size: 2rem; }
