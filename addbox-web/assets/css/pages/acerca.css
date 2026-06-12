@@ -1,6 +1,26 @@
 /* Reset general para esta página */
 .acerca-de-page { font-family: 'Roboto', sans-serif; }
 
+/* Hero integrado en Historia */
+.acerca-de-page .historia-hero-content {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 99, 3, 0.3);
+}
+.acerca-de-page .historia-hero-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.acerca-de-page .historia-hero-subtitle {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    margin: 0;
+    font-weight: 300;
+}
+
 /* Historia Premium */
 .acerca-de-page .historia-section {
     padding: 120px 0;
@@ -38,12 +58,13 @@
     letter-spacing: 1px;
 }
 .acerca-de-page .historia-texto h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
     color: #ffffff;
     font-weight: 700;
     position: relative;
     line-height: 1.2;
+    margin-top: 40px;
 }
 .acerca-de-page .historia-texto h2::after {
     content: '';
@@ -266,6 +287,8 @@
 /* Responsive */
 @media (max-width: 968px) {
     .acerca-de-page .historia-content { grid-template-columns: 1fr; gap: 60px; }
+    .acerca-de-page .historia-hero-title { font-size: 2.5rem; }
+    .acerca-de-page .historia-hero-subtitle { font-size: 1.1rem; }
     .acerca-de-page .historia-texto h2 { font-size: 2.2rem; }
     .acerca-de-page .historia-stats { grid-template-columns: 1fr; gap: 20px; }
     .acerca-de-page .stat-number { font-size: 2.5rem; }
