@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     background: #000;
-    padding: 15px 40px;
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -14,6 +14,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-logo {
+    padding: 10px 0;
 }
 
 .header-logo img {
@@ -63,7 +67,7 @@
 
 @media (max-width: 900px) {
     .header {
-        padding: 15px 20px;
+        padding: 20px 20px;
     }
     
     .header-nav {
