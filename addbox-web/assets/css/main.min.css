@@ -1,3 +1,5 @@
+.skip-link{position:absolute;top:-40px;left:0;background:#ff6303;color:#fff;padding:8px;z-index:100;text-decoration:none;font-weight:600}
+.skip-link:focus{top:0}
 :root{--naranja:#ff6303;--amarillo:#ffbf00;--azul:#0872fa;--negro:#0A0A0A;--blanco:#ffffff;--gris:#cccccc;--gris-oscuro:#111111;--card:#111;--muted:#cccccc;--gold:#f4b000;--accent:#1A73E8;--max-width:1300px;--radius:12px}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{font-family:'Roboto',sans-serif;background:var(--negro);color:var(--blanco);scroll-behavior:smooth;height:100%;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -136,7 +138,7 @@ img{max-width:100%;display:block}
 .footer-social a i{font-size:18px;color:#fff}
 .footer-social a img{width:24px;height:auto}
 .footer-social a:hover{background:rgba(255,99,3,.22);border-color:rgba(255,99,3,.5);transform:translateY(-3px);box-shadow:0 16px 35px rgba(0,0,0,.12)}
-.footer-copy{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #222;font-size:14px;color:#888
+.footer-copy{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #222;font-size:14px;color:#888}
 .footer.visible .footer-col,.footer.visible .footer-copy{opacity:1;transform:translateY(0)}
 .footer-col,.footer-copy{opacity:0;transform:translateY(25px);transition:all .9s ease}
 @media(max-width:900px){.footer-container{grid-template-columns:1fr;text-align:center}}
