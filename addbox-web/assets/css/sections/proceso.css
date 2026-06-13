@@ -37,6 +37,24 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.proceso-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.proceso-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -85,12 +103,24 @@
     margin: 0 auto;
 }
 
+@media (max-width: 960px) {
+    .proceso-video-container {
+        border-radius: 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .proceso-section {
         padding: 60px 20px;
     }
-    
+
     .proceso-ia-card {
         padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .proceso-video-container {
+        border-radius: 8px;
     }
 }
