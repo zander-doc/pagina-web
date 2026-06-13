@@ -386,3 +386,139 @@
         font-size: 36px;
     }
 }
+
+/* =============================================
+   CLIENTES SECTION
+   ============================================= */
+.clientes-section {
+    padding: 100px 0;
+    background: #1a1a1a;
+}
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.cliente-card {
+    background: #252525;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid rgba(255, 99, 3, 0.2);
+    transition: all 0.3s ease;
+}
+.cliente-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6303;
+    box-shadow: 0 20px 40px rgba(255, 99, 3, 0.2);
+}
+.cliente-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.cliente-card h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.cliente-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.cliente-ubicacion {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 99, 3, 0.1);
+    border-radius: 20px;
+    color: #ff6303;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* =============================================
+   TIPOS DE PROYECTOS SECTION
+   ============================================= */
+.proyectos-tipo-section {
+    padding: 100px 0;
+    background: #0a0a0a;
+}
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+.proyecto-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.proyecto-card:hover {
+    transform: translateY(-10px);
+}
+.proyecto-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+.proyecto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.proyecto-card:hover .proyecto-image img {
+    transform: scale(1.1);
+}
+.proyecto-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.badge-referencial {
+    background: rgba(255, 99, 3, 0.9);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.proyecto-content {
+    padding: 30px;
+}
+.proyecto-content h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.proyecto-content p {
+    color: #b0b0b0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.proyecto-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.proyecto-features li {
+    color: #888;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.proyecto-features li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+    .clientes-grid {
+        grid-template-columns: 1fr;
+    }
+}
