@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/pages/servicios.css">
     <link rel="stylesheet" href="assets/css/calculadoras.css">
+    <link rel="stylesheet" href="assets/css/pages/servicios-premium.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -53,206 +54,278 @@
         </div>
     </header>
 
-    <!-- HERO INTERNO -->
-    <section class="page-hero">
-        <div class="page-hero-container">
-            <h1 class="page-hero-title" data-animate="fade-up">Nuestros Servicios</h1>
-            <p class="page-hero-subtitle" data-animate="fade-up">
-                Soluciones integrales para todos tus proyectos de construcción y diseño
-            </p>
+    <!-- HERO PREMIUM -->
+    <section class="servicios-hero">
+        <div class="container">
+            <div class="servicios-header-content" data-animate="fade-up">
+                <span class="servicios-badge">Lo Que Hacemos</span>
+                <h1 class="servicios-title">Nuestros Servicios</h1>
+                <p class="servicios-subtitle">Soluciones integrales para todos tus proyectos de construcción y diseño</p>
+                <div class="servicios-line"></div>
+                
+                <div class="servicios-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="20">0</h3>
+                        <p>Servicios Especializados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="1150">0</h3>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="100">0</h3>
+                        <p>% de Calidad Garantizada</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
+    <!-- CTA DESTACADA "¿Qué deseas construir?" -->
+    <section class="servicios-cta-destacada">
+        <div class="container">
+            <div class="cta-destacada-content" data-animate="fade-up">
+                <span class="cta-destacada-badge">¿Qué deseas construir?</span>
+                <h2 class="cta-destacada-title">Conoce tu presupuesto</h2>
+                <p class="cta-destacada-text">Calcula el costo de tu proyecto en minutos. Obtén un estimado personalizado según tus necesidades.</p>
+                <a href="contacto.html" class="cta-destacada-btn">
+                    <i class="fas fa-calculator"></i>
+                    Calcular Presupuesto
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="servicios-separador">
+        <div class="separador-line"></div>
+        <span class="separador-texto">Nuestros Servicios</span>
+        <div class="separador-line"></div>
+    </div>
+
+    <!-- SERVICIOS GRID -->
     <section class="services-section">
-        <div class="services-container">
-            
+        <div class="servicios-grid">
+
             <!-- Construcción -->
-            <div class="service-card" data-animate="fade-up" id="construccion">
-                <div class="service-icon">
-                    <i class="fas fa-building"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-building"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Construcción</h2>
-                <p class="service-description">
-                    Desarrollamos proyectos de construcción residencial y comercial desde cero, 
-                    garantizando calidad en cada fase del proceso, desde los cimientos hasta los acabados finales.
-                </p>
-                <ul class="service-features">
-                    <li>Viviendas unifamiliares y multifamiliares</li>
-                    <li>Edificaciones comerciales</li>
-                    <li>Estructuras industriales</li>
-                    <li>Obras civiles</li>
+                <h3 class="servicio-title">Construcción</h3>
+                <p class="servicio-desc">Realizamos proyectos de construcción residencial y comercial con los más altos estándares de calidad.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Viviendas unifamiliares y multifamiliares</li>
+                    <li><i class="fas fa-check-circle"></i> Locales comerciales</li>
+                    <li><i class="fas fa-check-circle"></i> Edificaciones industriales</li>
+                    <li><i class="fas fa-check-circle"></i> Obras civiles</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Remodelación -->
-            <div class="service-card" data-animate="fade-up" id="remodelacion">
-                <div class="service-icon">
-                    <i class="fas fa-paint-roller"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Remodelación</h2>
-                <p class="service-description">
-                    Transformamos espacios existentes en ambientes modernos y funcionales, 
-                    respetando la estructura original y potenciando su valor.
-                </p>
-                <ul class="service-features">
-                    <li>Remodelación de cocinas y baños</li>
-                    <li>Ampliaciones de viviendas</li>
-                    <li>Renovación de fachadas</li>
-                    <li>Actualización de interiores</li>
+                <h3 class="servicio-title">Remodelación</h3>
+                <p class="servicio-desc">Transformamos espacios existentes en ambientes modernos y funcionales, respetando la estructura original.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Remodelación de cocinas y baños</li>
+                    <li><i class="fas fa-check-circle"></i> Ampliaciones de viviendas</li>
+                    <li><i class="fas fa-check-circle"></i> Renovación de fachadas</li>
+                    <li><i class="fas fa-check-circle"></i> Actualización de interiores</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Arquitectura -->
-            <div class="service-card" data-animate="fade-up" id="arquitectura">
-                <div class="service-icon">
-                    <i class="fas fa-drafting-compass"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Arquitectura</h2>
-                <p class="service-description">
-                    Diseño arquitectónico creativo y funcional, adaptado a tus necesidades, 
-                    presupuesto y el entorno donde se desarrollará el proyecto.
-                </p>
-                <ul class="service-features">
-                    <li>Diseño de planos</li>
-                    <li>Anteproyectos y renders</li>
-                    <li>Permisología y trámites</li>
-                    <li>Supervisión de obra</li>
+                <h3 class="servicio-title">Arquitectura</h3>
+                <p class="servicio-desc">Diseño arquitectónico creativo y funcional, adaptado a tus necesidades, presupuesto y el entorno.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Diseño de planos</li>
+                    <li><i class="fas fa-check-circle"></i> Anteproyectos y renders</li>
+                    <li><i class="fas fa-check-circle"></i> Permisología y trámites</li>
+                    <li><i class="fas fa-check-circle"></i> Supervisión de obra</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Ingeniería -->
-            <div class="service-card" data-animate="fade-up" id="ingenieria">
-                <div class="service-icon">
-                    <i class="fas fa-hard-hat"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Ingeniería</h2>
-                <p class="service-description">
-                    Soluciones técnicas especializadas para garantizar la seguridad, 
-                    funcionalidad y durabilidad de cada proyecto.
-                </p>
-                <ul class="service-features">
-                    <li>Cálculos estructurales</li>
-                    <li>Instalaciones eléctricas</li>
-                    <li>Sistemas de plomería</li>
-                    <li>Sistemas HVAC</li>
+                <h3 class="servicio-title">Ingeniería</h3>
+                <p class="servicio-desc">Soluciones técnicas especializadas para garantizar la seguridad, funcionalidad y durabilidad de cada proyecto.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Cálculos estructurales</li>
+                    <li><i class="fas fa-check-circle"></i> Instalaciones eléctricas</li>
+                    <li><i class="fas fa-check-circle"></i> Sistemas de plomería</li>
+                    <li><i class="fas fa-check-circle"></i> Sistemas HVAC</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Landscaping -->
-            <div class="service-card" data-animate="fade-up" id="landscaping">
-                <div class="service-icon">
-                    <i class="fas fa-leaf"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Landscaping</h2>
-                <p class="service-description">
-                    Diseño y construcción de áreas verdes que complementan tu propiedad, 
-                    creando espacios exteriores funcionales y estéticamente atractivos.
-                </p>
-                <ul class="service-features">
-                    <li>Diseño de jardines</li>
-                    <li>Sistemas de riego</li>
-                    <li>Áreas de recreación</li>
-                    <li>Iluminación exterior</li>
+                <h3 class="servicio-title">Landscaping</h3>
+                <p class="servicio-desc">Diseño y construcción de áreas verdes que complementan tu propiedad, creando espacios exteriores funcionales.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Diseño de jardines</li>
+                    <li><i class="fas fa-check-circle"></i> Sistemas de riego</li>
+                    <li><i class="fas fa-check-circle"></i> Áreas de recreación</li>
+                    <li><i class="fas fa-check-circle"></i> Iluminación exterior</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Render 3D -->
-            <div class="service-card" data-animate="fade-up" id="render-3d">
-                <div class="service-icon">
-                    <i class="fas fa-cube"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-cube"></i>
+                    </div>
                 </div>
-                <h2 class="service-title">Render 3D</h2>
-                <p class="service-description">
-                    Visualiza tu proyecto antes de construirlo con realistas renders 3D 
-                    y recorridos virtuales que te permiten tomar decisiones informadas.
-                </p>
-                <ul class="service-features">
-                    <li>Renders fotorrealistas</li>
-                    <li>Recorridos virtuales</li>
-                    <li>Modelado arquitectónico</li>
-                    <li>Presentaciones de proyecto</li>
+                <h3 class="servicio-title">Render 3D</h3>
+                <p class="servicio-desc">Visualiza tu proyecto antes de construirlo con realistas renders 3D y recorridos virtuales.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Renders fotorrealistas</li>
+                    <li><i class="fas fa-check-circle"></i> Recorridos virtuales</li>
+                    <li><i class="fas fa-check-circle"></i> Modelado arquitectónico</li>
+                    <li><i class="fas fa-check-circle"></i> Presentaciones de proyecto</li>
                 </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <!-- Supervisión de Obra -->
-            <div class="service-card" data-animate="fade-up" id="supervision">
-                <div class="service-icon">
-                    <i class="fas fa-clipboard-check"></i>
-                </div>
-                <h2 class="service-title">Supervisión de Obra</h2>
-                <p class="service-description">
-                    Control y seguimiento profesional de tu proyecto para asegurar 
-                    el cumplimiento de normas, calidad y tiempos establecidos.
-                </p>
-                <ul class="service-features">
-                    <li>Control de calidad</li>
-                    <li>Verificación de avances</li>
-                    <li>Coordinación de equipos</li>
-                    <li>Informes periódicos</li>
-                </ul>
-                <a href="contacto.html" class="btn btn-orange">Solicitar Información</a>
-            </div>
-
-            <!-- Calcula tu presupuesto para remodelación -->
-            <div class="service-card" data-animate="fade-up" id="calcular-remodelacion">
-                <div class="service-card-content">
-                    <div class="service-icon">
-                        <i class="fas fa-calculator"></i>
+            <div class="servicio-card" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-clipboard-check"></i>
                     </div>
-
-                    <h3>Calcula tu presupuesto para remodelación</h3>
-
-                    <p>Obtén una estimación clara de costos para tu remodelación de cocina, baño o espacios interiores.</p>
-
-                    <ul class="service-features">
-                        <li>Remodelación de cocina y baño</li>
-                        <li>Ampliación y mejoras estructurales</li>
-                        <li>Mantenimiento y reparaciones</li>
-                        <li>Presupuesto completo por áreas</li>
-                    </ul>
-
-                    <button class="btn btn-orange btn-calcular-remodelacion">Calcular</button>
-                    <div id="calc-remodelacion-placeholder" class="service-calculator-container" style="display:none;"></div>
                 </div>
-            </div>
-
-            <!-- ¿Deseas construir una vivienda? -->
-            <div class="service-card" data-animate="fade-up" id="construir-vivienda">
-                <div class="service-icon">
-                    <i class="fas fa-house-chimney"></i>
-                </div>
-                <div class="service-card-content">
-                    <h2 class="service-title">¿Deseas construir una vivienda? Conoce tu presupuesto</h2>
-                    <p class="service-description">
-                        El diseño y presupuesto son los pilares de cualquier obra. Conoce los costos de materiales, mano de obra y planificación para construir una vivienda segura y funcional.
-                    </p>
-                    <ul class="service-features">
-                        <li>Estimación de materiales</li>
-                        <li>Costos de mano de obra</li>
-                        <li>Planificación por etapas</li>
-                        <li>Presupuesto completo de obra</li>
-                    </ul>
-                </div>
-                <button class="btn btn-orange btn-calcular-construccion">Calcular</button>
+                <h3 class="servicio-title">Supervisión de Obra</h3>
+                <p class="servicio-desc">Control y seguimiento profesional de tu proyecto para asegurar el cumplimiento de normas y calidad.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Control de calidad</li>
+                    <li><i class="fas fa-check-circle"></i> Verificación de avances</li>
+                    <li><i class="fas fa-check-circle"></i> Coordinación de equipos</li>
+                    <li><i class="fas fa-check-circle"></i> Informes periódicos</li>
+                </ul>
+                <a href="contacto.html" class="servicio-btn">
+                    Solicitar Información
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- Contenedor para la calculadora de construcción -->
-    <div id="calculadora-dinamica" class="calc-container">
-        <div id="calc-construccion" style="display:none;"></div>
+    <!-- SEPARADOR -->
+    <div class="servicios-separador">
+        <div class="separador-line"></div>
+        <span class="separador-texto">Herramientas Exclusivas</span>
+        <div class="separador-line"></div>
     </div>
 
-    <!-- Carga del contenido de calculadoras -->
-    <div id="calculadoras-content" style="display:none;"></div>
+    <!-- TARJETAS DESTACADAS -->
+    <section class="services-section">
+        <div class="servicios-grid">
+
+            <!-- Calcula tu presupuesto para remodelación (normal) -->
+            <div class="servicio-card destacado-normal" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <span class="servicio-badge-cat">Herramienta</span>
+                </div>
+                <h3 class="servicio-title">Calcula tu presupuesto para remodelación</h3>
+                <p class="servicio-desc">Obtén un estimado detallado del costo de tu proyecto de remodelación en minutos.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Cálculo automático de materiales</li>
+                    <li><i class="fas fa-check-circle"></i> Estimación de mano de obra</li>
+                    <li><i class="fas fa-check-circle"></i> Presupuesto detallado por áreas</li>
+                    <li><i class="fas fa-check-circle"></i> Comparación de opciones</li>
+                </ul>
+                <a href="calculadora-remodelacion.html" class="servicio-btn">
+                    Calcular Ahora
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- ¿Deseas construir una vivienda? (DESTACADA PRINCIPAL + GRANDE) -->
+            <div class="servicio-card destacado-principal" data-animate="fade-up">
+                <div class="servicio-card-shine"></div>
+                <div class="servicio-header">
+                    <div class="servicio-icon-wrapper destacado">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="servicio-badge-cat principal">Más Popular</span>
+                </div>
+                <h3 class="servicio-title destacado">¿Deseas construir una vivienda? Conoce tu presupuesto</h3>
+                <p class="servicio-desc">Calcula el costo completo de tu proyecto de construcción residencial. Desde los cimientos hasta los acabados finales.</p>
+                <ul class="servicio-features">
+                    <li><i class="fas fa-check-circle"></i> Presupuesto completo por etapas</li>
+                    <li><i class="fas fa-check-circle"></i> Materiales y mano de obra incluidos</li>
+                    <li><i class="fas fa-check-circle"></i> Tiempos de ejecución estimados</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría personalizada incluida</li>
+                    <li><i class="fas fa-check-circle"></i> Financiación disponible</li>
+                </ul>
+                <a href="calculadora-vivienda.html" class="servicio-btn principal">
+                    <i class="fas fa-calculator"></i>
+                    Calcular Presupuesto de Vivienda
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
 
     <!-- CTA -->
     <section class="cta-section">
@@ -270,88 +343,32 @@
 
     <!-- JS -->
     <script src="assets/js/bundle.min.js"></script>
-    <script src="assets/js/calculadoras.js"></script>
     <script>
-        // Cargar contenido de calculadoras
-        fetch("assets/html/calculadoras.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("calculadoras-content").innerHTML = html;
-                
-                // Mover calculadoras a sus contenedores
-                setTimeout(() => {
-                    const calcRemodelacionContent = document.getElementById("calc-remodelacion-content");
-                    const calcConstruccionContent = document.getElementById("calc-construccion-content");
-                    
-                    if (calcRemodelacionContent) {
-                        const placeholder = document.getElementById("calc-remodelacion-placeholder");
-                        if (placeholder) {
-                            placeholder.appendChild(calcRemodelacionContent);
-                            placeholder.style.display = "none";
-                            calcRemodelacionContent.style.display = "block";
-                        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de estadísticas
+            const stats = document.querySelectorAll('.servicios-stats .stat-number');
+            const animateStats = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                entry.target.innerText = Math.floor(current) + '+';
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                entry.target.innerText = target + '+';
+                            }
+                        };
+                        updateCounter();
+                        animateStats.unobserve(entry.target);
                     }
-                    
-                    if (calcConstruccionContent) {
-                        const container = document.getElementById("calc-construccion");
-                        if (container) {
-                            container.appendChild(calcConstruccionContent);
-                            calcConstruccionContent.style.display = "block";
-                        }
-                    }
-
-                    if (typeof initCalculadoras === 'function') {
-                        initCalculadoras();
-                    }
-                }, 100);
-            });
-        
-        
-        // Alternar entre calculadoras
-        document.querySelectorAll('.btn-calcular-remodelacion').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const remodelacionPlaceholder = document.getElementById('calc-remodelacion-placeholder');
-                const construccionContainer = document.getElementById('calc-construccion');
-                if (!remodelacionPlaceholder) return;
-
-                const isOpen = remodelacionPlaceholder.style.display === 'block';
-                if (isOpen) {
-                    remodelacionPlaceholder.style.display = 'none';
-                    btn.textContent = 'Calcular';
-                } else {
-                    remodelacionPlaceholder.style.display = 'block';
-                    btn.textContent = 'Ocultar calculadora';
-                    if (construccionContainer) {
-                        construccionContainer.style.display = 'none';
-                    }
-                    document.querySelectorAll('.btn-calcular-construccion').forEach(b => b.textContent = 'Calcular');
-                }
-
-                btn.closest('.service-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        document.querySelectorAll('.btn-calcular-construccion').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const remodelacionPlaceholder = document.getElementById('calc-remodelacion-placeholder');
-                const construccionContainer = document.getElementById('calc-construccion');
-                if (!construccionContainer) return;
-
-                const isOpen = construccionContainer.style.display === 'block';
-                if (isOpen) {
-                    construccionContainer.style.display = 'none';
-                    btn.textContent = 'Calcular';
-                } else {
-                    construccionContainer.style.display = 'block';
-                    btn.textContent = 'Ocultar calculadora';
-                    if (remodelacionPlaceholder) {
-                        remodelacionPlaceholder.style.display = 'none';
-                    }
-                    document.querySelectorAll('.btn-calcular-remodelacion').forEach(b => b.textContent = 'Calcular');
-                }
-
-                construccionContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
+                });
+            }, { threshold: 0.5 });
+            stats.forEach(stat => animateStats.observe(stat));
         });
     </script>
 </body>
