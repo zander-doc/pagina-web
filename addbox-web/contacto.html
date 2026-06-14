@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/pages/contacto.css">
+    <link rel="stylesheet" href="assets/css/pages/contacto-premium.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -52,168 +53,231 @@
         </div>
     </header>
 
-    <!-- HERO INTERNO -->
-    <section class="page-hero">
-        <div class="page-hero-container">
-            <h1 class="page-hero-title" data-animate="fade-up">Contacto</h1>
-            <p class="page-hero-subtitle" data-animate="fade-up">
-                Estamos listos para hacer realidad tu proyecto
-            </p>
+    <!-- HERO PREMIUM -->
+    <section class="contacto-hero">
+        <div class="container">
+            <div class="contacto-header" data-animate="fade-up">
+                <span class="contacto-badge">Estamos Aquí para Ayudarte</span>
+                <h1 class="contacto-title">Contacto</h1>
+                <p class="contacto-subtitle">Estamos listos para hacer realidad tu proyecto</p>
+                <div class="contacto-line"></div>
+                
+                <div class="contacto-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7</h3>
+                        <p>Disponibilidad</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <h3 class="stat-number" data-target="1150">0</h3>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>100%</h3>
+                        <p>Tasa de Respuesta</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- CONTACTO PRINCIPAL -->
-    <section class="contact-section">
-        <div class="contact-container">
-            
-            <!-- Formulario -->
-            <div class="contact-form-wrapper" data-animate="fade-left">
-                <h2 class="contact-form-title">Envíanos un mensaje</h2>
+    <section class="contacto-section">
+        <div class="contacto-grid">
+            <!-- FORMULARIO PREMIUM -->
+            <div class="contacto-form-card" data-animate="fade-up">
+                <div class="form-header">
+                    <i class="fas fa-paper-plane"></i>
+                    <h2>Envíanos un mensaje</h2>
+                    <p>Completa el formulario y te responderemos en menos de 24 horas</p>
+                </div>
                 
-                <form class="contact-form" id="contactForm">
+                <form id="contacto-form" class="contacto-form">
                     <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nombre" required placeholder=" ">
                         <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
                     </div>
-
+                    
                     <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required placeholder=" ">
                         <label for="email">Correo electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
                     </div>
-
+                    
                     <div class="form-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="telefono" placeholder=" ">
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+58 412 XXX XXXX">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="servicio">Servicio de interés</label>
-                        <select id="servicio" name="servicio">
-                            <option value="">Selecciona un servicio</option>
+                        <i class="fas fa-list"></i>
+                        <select id="servicio" required>
+                            <option value="" disabled selected></option>
                             <option value="construccion">Construcción</option>
                             <option value="remodelacion">Remodelación</option>
                             <option value="arquitectura">Arquitectura</option>
                             <option value="ingenieria">Ingeniería</option>
                             <option value="landscaping">Landscaping</option>
-                            <option value="render">Render 3D</option>
-                            <option value="supervision">Supervisión de Obra</option>
                             <option value="otro">Otro</option>
                         </select>
+                        <label for="servicio">Servicio de interés</label>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        <i class="fas fa-comment"></i>
+                        <textarea id="mensaje" rows="5" required placeholder=" "></textarea>
+                        <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
                     </div>
-
-                    <button type="submit" class="btn btn-orange btn-full">
-                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
                     </button>
                 </form>
             </div>
 
-            <!-- Info de contacto -->
-            <div class="contact-info-wrapper" data-animate="fade-right">
-                
+            <!-- INFO CARDS PREMIUM -->
+            <div class="contacto-info-grid">
                 <!-- WhatsApp -->
-                <div class="contact-info-card whatsapp-card">
-                    <div class="contact-info-icon">
+                <div class="info-card" data-animate="fade-up">
+                    <div class="info-icon whatsapp">
                         <i class="fab fa-whatsapp"></i>
+                        <span class="status-dot"></span>
                     </div>
                     <h3>WhatsApp</h3>
                     <p>Respuesta inmediata</p>
-                    <a href="https://wa.me/584127706026" target="_blank" rel="noopener noreferrer" class="btn btn-green">
-                        Chatear Ahora
+                    <a href="https://wa.me/584127706026" target="_blank" class="info-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Escribir Ahora
                     </a>
+                    <p class="info-number">+58 412-7706026</p>
                 </div>
 
                 <!-- Email -->
-                <div class="contact-info-card email-card">
-                    <div class="contact-info-icon">
+                <div class="info-card" data-animate="fade-up">
+                    <div class="info-icon email">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Correo Electrónico</h3>
-                    <p>addboxllc.constructora.2026@gmail.com</p>
-                    <a href="mailto:addboxllc.constructora.2026@gmail.com" class="btn btn-blue">
+                    <p>Te respondemos en 24h</p>
+                    <a href="mailto:addboxllc.constructora.2026@gmail.com" class="info-btn email">
+                        <i class="fas fa-envelope"></i>
                         Enviar Email
                     </a>
+                    <p class="info-email">addboxllc.constructora.2026@gmail.com</p>
                 </div>
 
                 <!-- Teléfono -->
-                <div class="contact-info-card phone-card">
-                    <div class="contact-info-icon">
-                        <i class="fas fa-phone-alt"></i>
+                <div class="info-card" data-animate="fade-up">
+                    <div class="info-icon telefono">
+                        <i class="fas fa-phone"></i>
                     </div>
                     <h3>Teléfono</h3>
-                    <p>+58 412 770 6026</p>
-                    <a href="tel:+584127706026" class="btn btn-ghost">
+                    <p>Lun - Vie: 8:00 AM - 5:00 PM</p>
+                    <a href="tel:+584127706026" class="info-btn telefono">
+                        <i class="fas fa-phone"></i>
                         Llamar Ahora
                     </a>
+                    <p class="info-number">+58 412-7706026</p>
                 </div>
 
                 <!-- Ubicación -->
-                <div class="contact-info-card location-card">
-                    <div class="contact-info-icon">
+                <div class="info-card" data-animate="fade-up">
+                    <div class="info-icon ubicacion">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Ubicación</h3>
-                    <p>Venezuela</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- HORARIOS -->
-    <section class="hours-section">
-        <div class="hours-container" data-animate="fade-up">
-            <h2 class="hours-title">Horarios de Atención</h2>
-            
-            <div class="hours-grid">
-                <div class="hours-item">
-                    <span class="hours-day">Lunes a Viernes</span>
-                    <span class="hours-time">8:00 AM - 6:00 PM</span>
-                </div>
-                <div class="hours-item">
-                    <span class="hours-day">Sábados</span>
-                    <span class="hours-time">9:00 AM - 2:00 PM</span>
-                </div>
-                <div class="hours-item">
-                    <span class="hours-day">Domingos</span>
-                    <span class="hours-time">Cerrado</span>
-                </div>
-            </div>
-
-            <p class="hours-note">
-                <i class="fas fa-info-circle"></i>
-                Para emergencias, contáctanos por WhatsApp las 24 horas.
-            </p>
-        </div>
-    </section>
-
-    <!-- MAPA -->
-    <section class="map-section">
-        <div class="map-section-container" data-animate="fade-up">
-            <h2 class="section-title center">Nuestra Ubicación</h2>
-            <div class="mapa-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.5!2d-68.009042!3d10.266397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE1JzU5LjAiTiA2OMKwMDAnMzIuNiJX!5e0!3m2!1ses!2sve!4v1234567890" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0; border-radius: 15px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de ADDBOX Constructora - Guayabal, Naguanagua">
-                </iframe>
-                <div class="mapa-info">
-                    <h3>📍 Nuestra Ubicación</h3>
-                    <p>Guayabal, Naguanagua 2005, Carabobo, Venezuela</p>
-                    <p class="mapa-coordenadas">Coordenadas: 10.266397, -68.009042</p>
-                    <a href="https://www.google.com/maps?q=10.266397,-68.009042" target="_blank" class="btn-mapa">
-                        <i class="fas fa-directions"></i> Cómo llegar
+                    <p>Visítanos en nuestra oficina</p>
+                    <a href="https://maps.google.com/?q=10.266397,-68.009042" target="_blank" class="info-btn ubicacion">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ver Mapa
                     </a>
+                    <p class="info-location">Guayabal, Naguanagua, Carabobo</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS PREMIUM -->
+    <section class="horarios-section" data-animate="fade-up">
+        <div class="container">
+            <h2 class="section-title">Horarios de Atención</h2>
+            <div class="horarios-grid">
+                <div class="horario-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="horario-info">
+                        <h3>Lunes a Viernes</h3>
+                        <p>8:00 AM - 5:00 PM</p>
+                    </div>
+                    <span class="horario-status abierto">Abierto</span>
+                </div>
+                
+                <div class="horario-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="horario-info">
+                        <h3>Sábados</h3>
+                        <p>9:00 AM - 2:00 PM</p>
+                    </div>
+                    <span class="horario-status cerrado">Cerrado</span>
+                </div>
+                
+                <div class="horario-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="horario-info">
+                        <h3>Domingos</h3>
+                        <p>Cerrado</p>
+                    </div>
+                    <span class="horario-status cerrado">Cerrado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA PREMIUM -->
+    <section class="mapa-section" data-animate="fade-up">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="mapa-container">
+                <div class="mapa-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.5!2d-68.009042!3d10.266397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE1JzU5LjAiTiA2OMKwMDAnMzIuNiJX!5e0!3m2!1ses!2sve!4v1234567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="mapa-overlay">
+                        <div class="mapa-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>ADDBOX Constructora</h3>
+                            <p>Guayabal, Naguanagua 2005, Carabobo, Venezuela</p>
+                            <p class="coordenadas">10.266397, -68.009042</p>
+                            <a href="https://www.google.com/maps?q=10.266397,-68.009042" target="_blank" class="mapa-btn">
+                                <i class="fas fa-directions"></i>
+                                Cómo Llegar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="contacto-cta" data-animate="fade-up">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Tienes un Proyecto en Mente?</h2>
+                <p>Hablemos sobre cómo podemos hacerlo realidad. ¡Estamos aquí para ayudarte!</p>
+                <a href="https://wa.me/584127706026" target="_blank" class="cta-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    Escríbenos por WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -224,5 +288,33 @@
     <!-- JS -->
     <script src="assets/js/bundle.min.js"></script>
     <script src="assets/js/contacto.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de estadísticas
+            const stats = document.querySelectorAll('.contacto-stats .stat-number');
+            const animateStats = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                entry.target.innerText = Math.floor(current) + '+';
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                entry.target.innerText = target + '+';
+                            }
+                        };
+                        updateCounter();
+                        animateStats.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            stats.forEach(stat => animateStats.observe(stat));
+        });
+    </script>
 </body>
 </html>
