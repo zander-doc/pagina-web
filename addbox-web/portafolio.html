@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/pages/portafolio.css">
+    <link rel="stylesheet" href="assets/css/pages/portafolio-premium.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -52,141 +53,112 @@
         </div>
     </header>
 
-    <!-- HERO INTERNO -->
-    <section class="page-hero">
-        <div class="page-hero-container">
-            <h1 class="page-hero-title" data-animate="fade-up">Nuestro Portafolio</h1>
-            <p class="page-hero-subtitle" data-animate="fade-up">
-                Proyectos que reflejan nuestro compromiso con la excelencia
-            </p>
-        </div>
-    </section>
-
-    <!-- FILTROS -->
-    <section class="filter-section">
-        <div class="filter-container" data-animate="fade-up">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="terminados">Terminados</button>
-            <button class="filter-btn" data-filter="ejecucion">En Ejecución</button>
-            <button class="filter-btn" data-filter="remodelacion">Remodelaciones</button>
-            <button class="filter-btn" data-filter="landscaping">Landscaping</button>
-        </div>
-    </section>
-
-    <!-- PROYECTOS TERMINADOS -->
-    <section class="projects-section" id="terminados">
-        <div class="projects-container">
-            <h2 class="section-title" data-animate="fade-up">Proyectos Terminados</h2>
-            
-            <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card" data-animate="fade-up" data-category="terminados">
-                    <div class="project-image">
-                        <img src="assets/img/general/imagen-olivos.webp" alt="Residencia Los Olivos - Valencia, Carabobo" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-badge">Completado</span>
-                            <h3 class="project-title">Residencia Los Olivos</h3>
-                            <p class="project-category">Construcción Residencial</p>
-                            <a href="#" class="btn btn-orange btn-sm">Ver Detalles</a>
-                        </div>
+    <!-- HERO PREMIUM -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-header-content" data-animate="fade-up">
+                <span class="portfolio-badge">Nuestro Trabajo</span>
+                <h1 class="portfolio-title">Nuestro Portafolio</h1>
+                <p class="portfolio-subtitle">Proyectos que reflejan nuestro compromiso con la excelencia</p>
+                <div class="portfolio-line"></div>
+                
+                <div class="portfolio-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="150">0</h3>
+                        <p>Proyectos Completados</p>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Residencia Los Olivos</h3>
-                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="20">0</h3>
+                        <p>Años de Experiencia</p>
                     </div>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="project-card" data-animate="fade-up" data-category="terminados">
-                    <div class="project-image">
-                        <img src="assets/img/general/diseno-de-jardines-10-768x1024.webp" alt="Jardín Residencial - Naguanagua, Carabobo" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-badge">Completado</span>
-                            <h3 class="project-title">Jardín Residencial</h3>
-                            <p class="project-category">Landscaping</p>
-                            <a href="#" class="btn btn-orange btn-sm">Ver Detalles</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Jardín Residencial</h3>
-                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Naguanagua, Carabobo</p>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="project-card" data-animate="fade-up" data-category="terminados">
-                    <div class="project-image">
-                        <img src="assets/img/general/oficina-corporativa.webp" alt="Oficina Corporativa - Valencia, Carabobo" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-badge">Completado</span>
-                            <h3 class="project-title">Oficina Corporativa</h3>
-                            <p class="project-category">Remodelación Comercial</p>
-                            <a href="#" class="btn btn-orange btn-sm">Ver Detalles</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Oficina Corporativa</h3>
-                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-target="100">0</h3>
+                        <p>Clientes Satisfechos</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROYECTOS EN EJECUCIÓN -->
-    <section class="projects-section in-progress" id="ejecucion">
-        <div class="projects-container">
-            <h2 class="section-title" data-animate="fade-up">Proyectos en Ejecución</h2>
-            
-            <div class="projects-grid">
-                <!-- Proyecto en curso 1 -->
-                <div class="project-card" data-animate="fade-up" data-category="ejecucion">
-                    <div class="project-image">
-                        <img src="assets/img/general/remodelacion-edif.webp" alt="Condominio Vista Hermosa - San Diego, Carabobo" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-badge in-progress">En Progreso</span>
-                            <h3 class="project-title">Condominio Vista Hermosa</h3>
-                            <p class="project-category">Construcción Residencial</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%;"></div>
-                            </div>
-                            <span class="progress-text">65% Completado</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Condominio Vista Hermosa</h3>
-                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> San Diego, Carabobo</p>
-                        <div class="project-status">
-                            <span class="status-indicator active"></span>
-                            En construcción
-                        </div>
-                    </div>
-                </div>
+    <!-- FILTROS PREMIUM -->
+    <div class="portfolio-filters" data-animate="fade-up">
+        <button class="filtro-btn active" data-filter="todos">Todos</button>
+        <button class="filtro-btn" data-filter="terminados">Terminados</button>
+        <button class="filtro-btn" data-filter="ejecucion">En Ejecución</button>
+        <button class="filtro-btn" data-filter="remodelaciones">Remodelaciones</button>
+        <button class="filtro-btn" data-filter="landscaping">Landscaping</button>
+    </div>
 
-                <!-- Proyecto en curso 2 -->
-                <div class="project-card" data-animate="fade-up" data-category="ejecucion">
-                    <div class="project-image">
-                        <img src="assets/img/general/remodelacion-parqf.webp" alt="Parque Empresarial - Valencia, Carabobo" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-badge in-progress">En Progreso</span>
-                            <h3 class="project-title">Parque Empresarial</h3>
-                            <p class="project-category">Construcción Comercial</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 40%;"></div>
-                            </div>
-                            <span class="progress-text">40% Completado</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Parque Empresarial</h3>
-                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
-                        <div class="project-status">
-                            <span class="status-indicator active"></span>
-                            En construcción
-                        </div>
-                    </div>
+    <!-- PORTFOLIO GRID -->
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+            <!-- Proyecto 1 - Terminado -->
+            <div class="proyecto-card" data-category="terminados" data-animate="fade-up">
+                <div class="proyecto-image">
+                    <img src="assets/img/general/imagen-olivos.webp" alt="Residencia Los Olivos - Valencia, Carabobo" loading="lazy">
+                    <span class="proyecto-badge">Terminado</span>
+                </div>
+                <div class="proyecto-content">
+                    <h3>Residencia Los Olivos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
                 </div>
             </div>
+
+            <!-- Proyecto 2 - Terminado -->
+            <div class="proyecto-card" data-category="terminados landscaping" data-animate="fade-up">
+                <div class="proyecto-image">
+                    <img src="assets/img/general/diseno-de-jardines-10-768x1024.webp" alt="Jardín Residencial - Naguanagua, Carabobo" loading="lazy">
+                    <span class="proyecto-badge">Terminado</span>
+                </div>
+                <div class="proyecto-content">
+                    <h3>Jardín Residencial</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Naguanagua, Carabobo</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 - Terminado -->
+            <div class="proyecto-card" data-category="terminados remodelaciones" data-animate="fade-up">
+                <div class="proyecto-image">
+                    <img src="assets/img/general/oficina-corporativa.webp" alt="Oficina Corporativa - Valencia, Carabobo" loading="lazy">
+                    <span class="proyecto-badge">Terminado</span>
+                </div>
+                <div class="proyecto-content">
+                    <h3>Oficina Corporativa</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 - En Ejecución -->
+            <div class="proyecto-card" data-category="ejecucion" data-animate="fade-up">
+                <div class="proyecto-image">
+                    <img src="assets/img/general/remodelacion-edif.webp" alt="Condominio Vista Hermosa - San Diego, Carabobo" loading="lazy">
+                    <span class="proyecto-badge">En Ejecución</span>
+                </div>
+                <div class="proyecto-content">
+                    <h3>Condominio Vista Hermosa</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> San Diego, Carabobo</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 5 - En Ejecución -->
+            <div class="proyecto-card" data-category="ejecucion" data-animate="fade-up">
+                <div class="proyecto-image">
+                    <img src="assets/img/general/remodelacion-parqf.webp" alt="Parque Empresarial - Valencia, Carabobo" loading="lazy">
+                    <span class="proyecto-badge">En Ejecución</span>
+                </div>
+                <div class="proyecto-content">
+                    <h3>Parque Empresarial</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Valencia, Carabobo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN VER MÁS -->
+        <div class="portfolio-cta" data-animate="fade-up">
+            <button class="btn-ver-mas">
+                <span>Ver Todos los Proyectos</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
     </section>
 
@@ -370,5 +342,63 @@
 
     <!-- JS -->
     <script src="assets/js/bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de estadísticas
+            const stats = document.querySelectorAll('.portfolio-stats .stat-number');
+            const animateStats = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                entry.target.innerText = Math.floor(current) + '+';
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                entry.target.innerText = target + '+';
+                            }
+                        };
+                        updateCounter();
+                        animateStats.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            stats.forEach(stat => animateStats.observe(stat));
+            
+            // Filtros premium
+            const filterBtns = document.querySelectorAll('.filtro-btn');
+            const projectCards = document.querySelectorAll('.proyecto-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'todos' || card.getAttribute('data-category').includes(filter)) {
+                            card.style.display = 'block';
+                            card.style.animation = 'none';
+                            card.offsetHeight; // reflow
+                            card.style.animation = 'fadeInUp 0.6s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </body>
 </html>
