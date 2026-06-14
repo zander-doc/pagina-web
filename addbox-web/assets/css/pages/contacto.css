@@ -241,15 +241,91 @@
     background: var(--negro);
 }
 
-.map-container {
+.map-section-container {
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
-.map-wrapper {
-    border-radius: var(--radius);
+.mapa-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    border-radius: 15px;
     overflow: hidden;
-    margin-top: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 15px;
+    filter: grayscale(20%) contrast(1.1);
+    transition: filter 0.3s ease;
+    display: block;
+}
+
+.mapa-container iframe:hover {
+    filter: grayscale(0%) contrast(1);
+}
+
+.mapa-info {
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+    padding: 30px;
+    border-top: 3px solid #ff6303;
+}
+
+.mapa-info h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mapa-info p {
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.mapa-coordenadas {
+    font-family: 'Courier New', monospace;
+    color: #ff6303;
+    font-size: 0.9rem;
+    background: rgba(255, 99, 3, 0.1);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.btn-mapa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-mapa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 99, 3, 0.5);
+    color: #ffffff;
+}
+
+.btn-mapa i {
+    font-size: 1.1rem;
 }
 
 /* Responsive */
@@ -260,6 +336,18 @@
     
     .contact-info-wrapper {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mapa-container iframe {
+        height: 300px;
+    }
+    .mapa-info {
+        padding: 20px;
+    }
+    .mapa-info h3 {
+        font-size: 1.2rem;
     }
 }
 
