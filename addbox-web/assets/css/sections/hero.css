@@ -139,9 +139,9 @@
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(0, 0, 0, 0.85) 0%,
-        rgba(0, 0, 0, 0.7) 50%,
-        rgba(0, 0, 0, 0.85) 100%
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(192, 126, 3, 0.45) 100%
     );
     z-index: 1;
     pointer-events: none;
