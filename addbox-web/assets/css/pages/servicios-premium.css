@@ -239,31 +239,41 @@
     background: rgba(255, 99, 3, 0.05);
 }
 
-/* ===== TARJETAS DE SERVICIOS PREMIUM ===== */
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 0 20px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* ===== MEJORAS VISUALES DE TARJETAS ===== */
 .servicio-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(37, 37, 37, 0.95) 100%);
+    border: 1px solid rgba(255, 99, 3, 0.2);
+    backdrop-filter: blur(10px);
     position: relative;
-    background: #1a1a1a;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 35px 30px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }
 
+.servicio-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 99, 3, 0.05) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.servicio-card:hover::after {
+    opacity: 1;
+}
+
 .servicio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(255, 99, 3, 0.2);
-    border-color: rgba(255, 99, 3, 0.3);
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(255, 99, 3, 0.25);
+    border-color: rgba(255, 99, 3, 0.4);
 }
 
 .servicio-card-shine {
@@ -281,97 +291,64 @@
     left: 100%;
 }
 
-.servicio-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
+/* ===== ICONOS ===== */
 .servicio-icon-wrapper {
-    width: 70px;
-    height: 70px;
+    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
     border-radius: 15px;
-    background: linear-gradient(135deg, rgba(255, 99, 3, 0.2) 0%, rgba(255, 99, 3, 0.05) 100%);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    color: #ff6303;
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .servicio-card:hover .servicio-icon-wrapper {
-    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
-    color: #fff;
-    transform: scale(1.1);
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 99, 3, 0.5);
 }
 
+/* ===== BADGES ===== */
 .servicio-badge-cat {
-    display: inline-block;
-    padding: 5px 12px;
-    background: rgba(255, 99, 3, 0.1);
-    border: 1px solid rgba(255, 99, 3, 0.3);
+    background: linear-gradient(135deg, #ff6303, #ff8c42);
+    color: #fff;
+    padding: 6px 15px;
     border-radius: 20px;
-    color: #ff6303;
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    border: none;
 }
 
-.servicio-title {
-    color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    font-weight: 600;
+.servicio-badge-cat.principal {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    box-shadow: 0 5px 15px rgba(255, 99, 3, 0.4);
+    animation: badgePulse 2s ease infinite;
 }
 
-.servicio-desc {
-    color: #b0b0b0;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
-.servicio-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 25px 0;
-}
-
-.servicio-features li {
-    color: #888;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.servicio-features li:last-child {
-    border-bottom: none;
-}
-
-.servicio-features li i {
-    color: #ff6303;
-    font-size: 1rem;
-}
-
+/* ===== BOTONES ===== */
 .servicio-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
     background: linear-gradient(135deg, #ff6303 0%, #ff8c42 100%);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(255, 99, 3, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
 }
 
 .servicio-btn:hover {
@@ -384,90 +361,16 @@
     transition: transform 0.3s ease;
 }
 
-.servicio-btn:hover i:last-child {
+.servicio-btn:hover i:last-child:not(.fa-calculator) {
     transform: translateX(5px);
 }
 
-/* ===== TARJETAS DESTACADAS ===== */
-.servicio-card.destacado-normal {
-    border: 2px solid rgba(255, 99, 3, 0.5);
-    background: linear-gradient(135deg, rgba(45, 27, 0, 0.3) 0%, rgba(26, 26, 26, 0.9) 100%);
-}
-
-.servicio-card.destacado-principal {
-    grid-column: span 2;
-    border: 3px solid #ff6303;
-    background: linear-gradient(135deg, rgba(255, 99, 3, 0.1) 0%, rgba(26, 26, 26, 0.95) 100%);
-    padding: 50px 40px;
-    box-shadow: 0 20px 60px rgba(255, 99, 3, 0.2);
-}
-
-.servicio-card.destacado-principal .servicio-icon-wrapper.destacado {
-    width: 90px;
-    height: 90px;
-    font-size: 2.2rem;
-    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 50%, #ff6303 100%);
-    background-size: 200% 200%;
-    animation: iconPulse 3s ease infinite;
-    color: #fff;
-}
-
-.servicio-card.destacado-principal .servicio-icon-wrapper.destacado:hover {
-    transform: scale(1.1);
-}
-
-@keyframes iconPulse {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.servicio-card.destacado-principal .servicio-title.destacado {
-    font-size: 2rem;
-    background: linear-gradient(135deg, #fff 0%, #ff6303 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.servicio-card.destacado-principal .servicio-badge-cat.principal {
-    background: linear-gradient(135deg, #ff6303, #ff8c42);
-    padding: 8px 18px;
-    font-size: 0.8rem;
-    color: #fff;
-    border: none;
-    box-shadow: 0 5px 15px rgba(255, 99, 3, 0.4);
-}
-
-.servicio-card.destacado-principal .servicio-btn.principal {
-    padding: 18px 40px;
-    font-size: 1.1rem;
-    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 50%, #ff6303 100%);
-    background-size: 200% 200%;
-    animation: btnGlow 3s ease infinite;
-}
-
-@keyframes btnGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.servicio-card.destacado-principal .servicio-features li {
-    font-size: 1rem;
-    padding: 12px 0;
-}
-
-.servicio-card.destacado-principal .servicio-desc {
-    font-size: 1.05rem;
-}
-
-/* ===== CALCULADORAS INTEGRADAS ===== */
+/* ===== HERRAMIENTAS GRID ===== */
 .herramientas-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -475,8 +378,14 @@
 .herramientas-grid .servicio-card {
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 550px;
+    height: 100%;
+    min-height: 580px;
+}
+
+.herramientas-grid .servicio-card.destacada {
+    min-height: 620px;
+    border: 2px solid #ff6303;
+    box-shadow: 0 0 40px rgba(255, 99, 3, 0.2);
 }
 
 .herramientas-grid .servicio-header {
@@ -490,40 +399,85 @@
 .herramientas-grid .servicio-icon-wrapper {
     width: 70px;
     height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-width: 70px;
+    font-size: 1.6rem;
     flex-shrink: 0;
+}
+
+.herramientas-grid .servicio-icon-wrapper.destacado {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #ff6303 0%, #ff8c42 50%, #ff6303 100%);
+    background-size: 200% 200%;
+    animation: iconPulse 3s ease infinite;
 }
 
 .herramientas-grid .servicio-title {
     font-size: 1.5rem;
-    min-height: 70px;
-    display: flex;
-    align-items: flex-start;
     line-height: 1.3;
     margin-bottom: 20px;
+    min-height: 75px;
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    font-weight: 600;
+}
+
+.herramientas-grid .servicio-title.destacado {
+    min-height: 85px;
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, #fff 0%, #ff6303 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .herramientas-grid .servicio-desc {
     flex-grow: 1;
     margin-bottom: 25px;
     min-height: 80px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    font-size: 0.95rem;
 }
 
 .herramientas-grid .servicio-features {
     margin-bottom: 30px;
     flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.herramientas-grid .servicio-features li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.herramientas-grid .servicio-features li:last-child {
+    border-bottom: none;
+}
+
+.herramientas-grid .servicio-features li i:first-child {
+    font-size: 1rem;
+    width: 20px;
+    flex-shrink: 0;
+    color: #ff6303;
 }
 
 .herramientas-grid .servicio-btn {
     margin-top: auto;
     align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    border: none;
+    width: 100%;
+    padding: 14px 25px;
+    font-size: 0.95rem;
 }
 
 .herramientas-grid .servicio-btn i:last-child {
@@ -534,7 +488,96 @@
     transform: rotate(180deg);
 }
 
-/* Contenedor de calculadora */
+/* ===== SERVICIOS GRID (3 columnas) ===== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.servicios-grid .servicio-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 520px;
+}
+
+.servicios-grid .servicio-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+    min-height: 70px;
+}
+
+.servicios-grid .servicio-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.servicios-grid .servicio-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    font-weight: 600;
+}
+
+.servicios-grid .servicio-desc {
+    flex-grow: 1;
+    margin-bottom: 25px;
+    min-height: 70px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+.servicios-grid .servicio-features {
+    margin-bottom: 30px;
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.servicios-grid .servicio-features li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.servicios-grid .servicio-features li:last-child {
+    border-bottom: none;
+}
+
+.servicios-grid .servicio-features li i:first-child {
+    font-size: 0.9rem;
+    width: 20px;
+    flex-shrink: 0;
+    color: #ff6303;
+}
+
+.servicios-grid .servicio-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== CALCULADORAS INTEGRADAS ===== */
 .calculadora-container {
     padding: 60px 20px;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
@@ -891,40 +934,42 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive */
-@media (max-width: 968px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
     .herramientas-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
-    .herramientas-grid .servicio-card {
+    .herramientas-grid .servicio-card,
+    .herramientas-grid .servicio-card.destacada {
         min-height: auto;
     }
-    .herramientas-grid .servicio-title {
-        min-height: auto;
-    }
+    .herramientas-grid .servicio-title,
+    .herramientas-grid .servicio-title.destacado,
     .herramientas-grid .servicio-desc {
         min-height: auto;
     }
-    .calculadora-vivienda {
-        padding: 40px 20px;
-    }
 }
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 968px) {
     .servicios-title { font-size: 2.5rem; }
     .servicios-stats { grid-template-columns: 1fr; gap: 20px; }
     .cta-destacada-title { font-size: 2.2rem; }
     .cta-destacada-content { padding: 40px 20px; }
     .cta-destacada-btn { padding: 18px 35px; font-size: 1rem; }
-    .servicio-card.destacado-principal {
-        grid-column: span 1;
-        padding: 40px 30px;
-    }
-    .servicio-card.destacado-principal .servicio-title.destacado {
-        font-size: 1.6rem;
-    }
     .servicios-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .servicios-grid .servicio-card {
+        min-height: auto;
+    }
+    .servicios-grid .servicio-title,
+    .servicios-grid .servicio-desc {
+        min-height: auto;
+    }
+    .calculadora-vivienda {
+        padding: 40px 20px;
     }
 }
 
