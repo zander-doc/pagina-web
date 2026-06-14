@@ -109,10 +109,11 @@
                     <li><i class="fas fa-check-circle"></i> Presupuesto detallado por áreas</li>
                     <li><i class="fas fa-check-circle"></i> Comparación de opciones</li>
                 </ul>
-                <a href="contacto.html" class="servicio-btn">
-                    Solicitar Información
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+                <button type="button" class="servicio-btn calcular-btn" data-target="calc-remodelacion">
+                    <i class="fas fa-calculator"></i>
+                    Calcular
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
 
             <!-- ¿Deseas construir una vivienda? (DESTACADA PRINCIPAL) -->
@@ -133,15 +134,253 @@
                     <li><i class="fas fa-check-circle"></i> Asesoría personalizada incluida</li>
                     <li><i class="fas fa-check-circle"></i> Financiación disponible</li>
                 </ul>
-                <a href="contacto.html" class="servicio-btn principal">
+                <button type="button" class="servicio-btn principal calcular-btn" data-target="calc-vivienda">
                     <i class="fas fa-calculator"></i>
-                    Solicitar Presupuesto
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+                    Calcular
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
 
         </div>
     </section>
+
+    <!-- CALCULADORA 1: REMODELACIÓN -->
+    <div id="calc-remodelacion" class="calculadora-container" style="display: none;">
+        <div class="calculadora-wrapper">
+            <div class="calculadora-header">
+                <h2><i class="fas fa-calculator"></i> Calculadora de Presupuesto - Remodelación</h2>
+                <button class="cerrar-calc" onclick="cerrarCalculadora('calc-remodelacion')"><i class="fas fa-times"></i></button>
+            </div>
+            <p class="calculadora-subtitle">Obtén un estimado rápido para tu proyecto con ADDBOX.</p>
+
+            <form id="calc-form-remodelacion" class="calculadora-form">
+                <div class="calc-field">
+                    <label for="tipo-remod">Tipo de proyecto</label>
+                    <select id="tipo-remod" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="remodelacion">Remodelación (cocina, baño, área)</option>
+                        <option value="ampliacion">Ampliación / Home Addition</option>
+                        <option value="mantenimiento">Mantenimiento / Reparaciones</option>
+                        <option value="construccion">Construcción nueva</option>
+                    </select>
+                </div>
+
+                <div class="calc-field">
+                    <label for="metros-remod">Metros cuadrados aproximados</label>
+                    <input type="number" id="metros-remod" min="1" step="1" placeholder="Ej: 25" required />
+                    <p class="calc-hint">No tiene que ser exacto, solo una referencia.</p>
+                </div>
+
+                <div class="calc-field">
+                    <label for="acabado-remod">Nivel de acabado</label>
+                    <select id="acabado-remod" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="basico">Básico (funcional, económico)</option>
+                        <option value="estandar">Estándar (buena calidad)</option>
+                        <option value="premium">Premium (alto nivel de detalle)</option>
+                    </select>
+                </div>
+
+                <div class="calc-field">
+                    <label for="urgencia-remod">Urgencia del proyecto</label>
+                    <select id="urgencia-remod" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="normal">Flexible / Normal</option>
+                        <option value="rapido">Rápido (prioridad alta)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="calc-submit">Calcular presupuesto estimado</button>
+            </form>
+
+            <div id="result-remodelacion" class="calculadora-result" style="display: none;">
+                <div class="result-title">Presupuesto estimado:</div>
+                <div class="result-value" id="result-value-remod">$0 – $0</div>
+                <div class="result-note">Este es un rango aproximado. El valor final puede variar según materiales, permisos y condiciones del sitio.</div>
+                <div class="result-whatsapp">
+                    <strong>¿Quieres un presupuesto detallado?</strong>
+                    <a href="https://wa.me/584127706026?text=Hola%20ADDBOX%2C%20quiero%20un%20presupuesto%20detallado.%20Tengo%20fotos%20de%20mi%20proyecto%20y%20quiero%20compartirlas.%20%F0%9F%93%B7" 
+                       target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Envíanos fotos por WhatsApp: +58 412-7706026
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALCULADORA 2: VIVIENDA -->
+    <div id="calc-vivienda" class="calculadora-container calculadora-vivienda" style="display: none;">
+        <div class="container">
+            <div class="calculadora-header">
+                <h1><i class="fas fa-home"></i> Calculadora de Construcción de Vivienda</h1>
+                <button class="cerrar-calc" onclick="cerrarCalculadora('calc-vivienda')"><i class="fas fa-times"></i></button>
+            </div>
+            <p class="calculadora-subtitle">Estimación rápida del costo de construcción en Venezuela.</p>
+
+            <div class="grid">
+                <!-- FORMULARIO IZQUIERDO -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Datos del proyecto</div>
+                        <div class="card-tag">Entrada</div>
+                    </div>
+
+                    <form id="calc-form-vivienda">
+                        <!-- INFORMACIÓN GENERAL -->
+                        <div class="section">
+                            <div class="section-title">1. Información general</div>
+
+                            <div class="field">
+                                <label for="area">Área construida aproximada (m²)</label>
+                                <input type="number" id="area" min="1" step="1" placeholder="Ej: 120" required>
+                                <div class="hint">Superficie total de la vivienda a construir.</div>
+                            </div>
+
+                            <div class="inline">
+                                <div class="field">
+                                    <label for="niveles">Número de niveles</label>
+                                    <input type="number" id="niveles" min="1" step="1" value="1">
+                                    <div class="hint">Plantas o pisos de la vivienda.</div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="calidad">Calidad de construcción</label>
+                                    <select id="calidad">
+                                        <option value="economica">Económica</option>
+                                        <option value="estandar" selected>Estándar</option>
+                                        <option value="premium">Premium</option>
+                                    </select>
+                                    <div class="hint">Afecta el costo base por m².</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="ubicacion">Ubicación / Ciudad</label>
+                                <select id="ubicacion">
+                                    <option value="1">Caracas (1.00)</option>
+                                    <option value="0.9">Maracay / Valencia (0.90)</option>
+                                    <option value="0.85">Barquisimeto / Maracaibo (0.85)</option>
+                                    <option value="0.8">Interior del país (0.80)</option>
+                                </select>
+                                <div class="hint">Factor según disponibilidad de materiales y mano de obra.</div>
+                            </div>
+                        </div>
+
+                        <!-- COSTOS DIRECTOS -->
+                        <div class="section">
+                            <div class="section-title">2. Costos directos por m² (automáticos)</div>
+
+                            <div class="field">
+                                <label>Materiales por m² (USD)</label>
+                                <input type="number" id="materiales" readonly style="opacity:0.7;">
+                            </div>
+
+                            <div class="field">
+                                <label>Mano de obra por m² (USD)</label>
+                                <input type="number" id="mano_obra" readonly style="opacity:0.7;">
+                            </div>
+
+                            <div class="field">
+                                <label>Otros costos por m² (USD)</label>
+                                <input type="number" id="otros" readonly style="opacity:0.7;">
+                            </div>
+
+                            <label style="display:flex; align-items:center; gap:8px; margin-top:8px;">
+                                <input type="checkbox" id="manualToggle">
+                                Ingresar valores manualmente
+                            </label>
+                            <div class="hint">Solo para usuarios con experiencia en costos.</div>
+                        </div>
+
+                        <!-- PORCENTAJES -->
+                        <div class="section">
+                            <div class="section-title">3. Porcentajes adicionales</div>
+
+                            <div class="inline">
+                                <div class="field">
+                                    <label for="indirectos">% Gastos indirectos</label>
+                                    <input type="number" id="indirectos" value="10">
+                                </div>
+
+                                <div class="field">
+                                    <label for="utilidad">% Utilidad</label>
+                                    <input type="number" id="utilidad" value="15">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="contingencia">% Contingencia</label>
+                                <input type="number" id="contingencia" value="5">
+                            </div>
+                        </div>
+
+                        <!-- TASA -->
+                        <div class="section">
+                            <div class="section-title">4. Tipo de cambio</div>
+
+                            <div class="inline">
+                                <div class="field">
+                                    <label for="tasa">Tasa (Bs/USD)</label>
+                                    <input type="number" id="tasa" placeholder="Ej: 40">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning" id="warning" style="display: none;">Debes ingresar valores válidos.</div>
+
+                        <button type="submit" class="calc-submit-vivienda">Calcular costo de construcción</button>
+                    </form>
+                </div>
+
+                <!-- PANEL DE RESULTADOS -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Resultado estimado</div>
+                        <div class="card-tag">Desglose</div>
+                    </div>
+
+                    <div id="result-vivienda">
+                        <div class="result-main" id="total-usd">$0</div>
+                        <div class="result-sub" id="total-bs">Equivalente en bolívares: —</div>
+
+                        <div class="section">
+                            <div class="section-title">Desglose de costos</div>
+
+                            <div class="result-row"><span>Área total:</span><span id="r-area">0 m²</span></div>
+                            <div class="result-row"><span>Costo directo por m²:</span><span id="r-directo-m2">$0</span></div>
+                            <div class="result-row"><span>Costo directo total:</span><span id="r-directo-total">$0</span></div>
+                            <div class="result-row"><span>Gastos indirectos:</span><span id="r-indirectos">$0</span></div>
+                            <div class="result-row"><span>Contingencia:</span><span id="r-contingencia">$0</span></div>
+                            <div class="result-row"><span>Utilidad:</span><span id="r-utilidad">$0</span></div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-title">Costo final por m²</div>
+                            <div class="result-row"><span>Total por m² (USD):</span><span id="r-total-m2-usd">$0</span></div>
+                            <div class="result-row"><span>Total por m² (Bs):</span><span id="r-total-m2-bs">—</span></div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-title">Resumen rápido</div>
+                            <span class="pill">Área: <span id="pill-area">0 m²</span></span>
+                            <span class="pill">Calidad: <span id="pill-calidad">—</span></span>
+                            <span class="pill">Ubicación: <span id="pill-ubicacion">—</span></span>
+                        </div>
+
+                        <p class="note">Estimación referencial basada en costos típicos de obra en Venezuela.</p>
+
+                        <div class="result-whatsapp">
+                            <strong>¿Quieres un presupuesto detallado?</strong>
+                            <a href="https://wa.me/584127706026?text=Hola%20ADDBOX%2C%20quiero%20un%20presupuesto%20detallado.%20Tengo%20fotos%20de%20mi%20proyecto%20y%20quiero%20compartirlas.%20%F0%9F%93%B7" 
+                               target="_blank" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Envíanos fotos por WhatsApp: +58 412-7706026
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SEPARADOR NUESTROS SERVICIOS -->
     <div class="servicios-separador">
@@ -344,6 +583,28 @@
     <!-- JS -->
     <script src="assets/js/bundle.min.js"></script>
     <script>
+        // Función para mostrar/ocultar calculadoras
+        function toggleCalculadora(targetId) {
+            const calc = document.getElementById(targetId);
+            const btn = document.querySelector('[data-target="' + targetId + '"]');
+            
+            if (calc.style.display === 'none' || !calc.style.display) {
+                calc.style.display = 'block';
+                btn.innerHTML = '<i class="fas fa-calculator"></i> Ocultar <i class="fas fa-chevron-up"></i>';
+                calc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                calc.style.display = 'none';
+                btn.innerHTML = '<i class="fas fa-calculator"></i> Calcular <i class="fas fa-chevron-down"></i>';
+            }
+        }
+
+        function cerrarCalculadora(id) {
+            const calc = document.getElementById(id);
+            const btn = document.querySelector('[data-target="' + id + '"]');
+            calc.style.display = 'none';
+            btn.innerHTML = '<i class="fas fa-calculator"></i> Calcular <i class="fas fa-chevron-down"></i>';
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Animación de estadísticas
             const stats = document.querySelectorAll('.servicios-stats .stat-number');
@@ -369,6 +630,152 @@
                 });
             }, { threshold: 0.5 });
             stats.forEach(stat => animateStats.observe(stat));
+            
+            // Agregar event listeners a los botones de calculadoras
+            document.querySelectorAll('.calcular-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    toggleCalculadora(target);
+                });
+            });
+
+            // ===== CALCULADORA 1: REMODELACIÓN =====
+            const formRemod = document.getElementById('calc-form-remodelacion');
+            const resultRemod = document.getElementById('result-remodelacion');
+            const resultValueRemod = document.getElementById('result-value-remod');
+
+            if (formRemod) {
+                formRemod.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const tipo = document.getElementById('tipo-remod').value;
+                    const metros = parseFloat(document.getElementById('metros-remod').value || '0');
+                    const acabado = document.getElementById('acabado-remod').value;
+                    const urgencia = document.getElementById('urgencia-remod').value;
+
+                    if (!tipo || !metros || !acabado || !urgencia) {
+                        alert('Por favor completa todos los campos.');
+                        return;
+                    }
+
+                    let basePorMetro = 0;
+                    switch (tipo) {
+                        case 'remodelacion': basePorMetro = 120; break;
+                        case 'ampliacion': basePorMetro = 150; break;
+                        case 'mantenimiento': basePorMetro = 80; break;
+                        case 'construccion': basePorMetro = 200; break;
+                    }
+
+                    if (acabado === 'estandar') basePorMetro *= 1.2;
+                    if (acabado === 'premium') basePorMetro *= 1.5;
+                    if (urgencia === 'rapido') basePorMetro *= 1.15;
+
+                    const estimadoBase = basePorMetro * metros;
+                    const min = Math.round(estimadoBase * 0.9);
+                    const max = Math.round(estimadoBase * 1.15);
+
+                    const fmt = (v) => v.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+                    resultValueRemod.textContent = `${fmt(min)} – ${fmt(max)}`;
+                    resultRemod.style.display = 'block';
+                    resultRemod.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            }
+
+            // ===== CALCULADORA 2: VIVIENDA =====
+            const el = (id) => document.getElementById(id);
+            const fmtUSD = (v) => v.toLocaleString('es-VE', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+            const fmtBs = (v) => v.toLocaleString('es-VE', { style: 'currency', currency: 'VES', maximumFractionDigits: 2 });
+
+            const calidadSelect = el('calidad');
+            const manualToggle = el('manualToggle');
+
+            function actualizarCostosAutomaticos() {
+                if (!calidadSelect || !manualToggle) return;
+                if (manualToggle.checked) return;
+
+                let calidad = calidadSelect.value;
+                let materiales = 0, mano = 0, otros = 0;
+
+                if (calidad === 'economica') { materiales = 140; mano = 75; otros = 25; }
+                else if (calidad === 'estandar') { materiales = 175; mano = 90; otros = 30; }
+                else if (calidad === 'premium') { materiales = 230; mano = 115; otros = 40; }
+
+                if (el('materiales')) el('materiales').value = materiales;
+                if (el('mano_obra')) el('mano_obra').value = mano;
+                if (el('otros')) el('otros').value = otros;
+            }
+
+            if (calidadSelect) calidadSelect.addEventListener('change', actualizarCostosAutomaticos);
+
+            if (manualToggle) {
+                manualToggle.addEventListener('change', () => {
+                    ['materiales', 'mano_obra', 'otros'].forEach(id => {
+                        const input = el(id);
+                        if (input) {
+                            input.readOnly = !manualToggle.checked;
+                            input.style.opacity = manualToggle.checked ? '1' : '0.7';
+                        }
+                    });
+                    if (!manualToggle.checked) actualizarCostosAutomaticos();
+                });
+            }
+
+            actualizarCostosAutomaticos();
+
+            const formVivienda = el('calc-form-vivienda');
+            if (formVivienda) {
+                formVivienda.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const area = parseFloat(el('area').value || 0);
+                    const niveles = parseInt(el('niveles').value || 1);
+                    const calidad = el('calidad').value;
+                    const ubicacionFactor = parseFloat(el('ubicacion').value || 1);
+                    const materiales = parseFloat(el('materiales').value || 0);
+                    const manoObra = parseFloat(el('mano_obra').value || 0);
+                    const otros = parseFloat(el('otros').value || 0);
+                    const indirectosPct = parseFloat(el('indirectos').value || 0);
+                    const utilidadPct = parseFloat(el('utilidad').value || 0);
+                    const contingenciaPct = parseFloat(el('contingencia').value || 0);
+                    const tasa = parseFloat(el('tasa').value || 0);
+
+                    if (!area || area <= 0) {
+                        const warning = el('warning');
+                        if (warning) { warning.style.display = 'block'; warning.textContent = 'Debes ingresar un área válida.'; }
+                        return;
+                    }
+
+                    let calidadFactor = 1;
+                    if (calidad === 'economica') calidadFactor = 0.9;
+                    if (calidad === 'premium') calidadFactor = 1.2;
+
+                    const costoDirectoM2 = (materiales + manoObra + otros) * calidadFactor * ubicacionFactor;
+                    const costoDirectoTotal = costoDirectoM2 * area;
+                    const montoIndirectos = costoDirectoTotal * indirectosPct / 100;
+                    const montoContingencia = costoDirectoTotal * contingenciaPct / 100;
+                    const subtotal = costoDirectoTotal + montoIndirectos + montoContingencia;
+                    const montoUtilidad = subtotal * utilidadPct / 100;
+                    const totalUSD = subtotal + montoUtilidad;
+                    const totalM2USD = totalUSD / area;
+                    const totalBs = tasa ? totalUSD * tasa : null;
+                    const totalM2Bs = tasa ? totalM2USD * tasa : null;
+
+                    if (el('total-usd')) el('total-usd').textContent = fmtUSD(totalUSD);
+                    if (el('total-bs')) el('total-bs').textContent = totalBs ? `Equivalente en bolívares: ${fmtBs(totalBs)}` : 'Equivalente en bolívares: —';
+                    if (el('r-area')) el('r-area').textContent = `${area} m²`;
+                    if (el('r-directo-m2')) el('r-directo-m2').textContent = fmtUSD(costoDirectoM2);
+                    if (el('r-directo-total')) el('r-directo-total').textContent = fmtUSD(costoDirectoTotal);
+                    if (el('r-indirectos')) el('r-indirectos').textContent = fmtUSD(montoIndirectos);
+                    if (el('r-contingencia')) el('r-contingencia').textContent = fmtUSD(montoContingencia);
+                    if (el('r-utilidad')) el('r-utilidad').textContent = fmtUSD(montoUtilidad);
+                    if (el('r-total-m2-usd')) el('r-total-m2-usd').textContent = fmtUSD(totalM2USD);
+                    if (el('r-total-m2-bs')) el('r-total-m2-bs').textContent = totalM2Bs ? fmtBs(totalM2Bs) : '—';
+                    if (el('pill-area')) el('pill-area').textContent = `${area} m² / ${niveles} nivel(es)`;
+                    if (el('pill-calidad')) el('pill-calidad').textContent = calidad.charAt(0).toUpperCase() + calidad.slice(1);
+                    if (el('pill-ubicacion') && el('ubicacion')) el('pill-ubicacion').textContent = el('ubicacion').selectedOptions[0].text;
+                });
+            }
         });
     </script>
 </body>
