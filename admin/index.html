@@ -3,64 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADDBOX - Sistema de Inventario</title>
-    <meta http-equiv="refresh" content="0; url=/admin/admin-dashboard/index.html">
-    <script>
-        window.location.href = '/admin/admin-dashboard/index.html';
-    </script>
+    <title>Portal Interno ADDBOX</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            background: #0a0a0a;
             color: #fff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .container { text-align: center; padding: 40px; }
-        .logo { font-size: 3rem; margin-bottom: 20px; }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #fff 0%, #ff6303 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 5px solid rgba(255, 99, 3, 0.2);
-            border-top-color: #ff6303;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 30px auto;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .message { color: #b0b0b0; font-size: 1.1rem; margin: 20px 0; }
-        .link {
-            color: #ff6303;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
+        .container {
+            text-align: center;
+            padding: 40px;
             border: 2px solid #ff6303;
-            border-radius: 5px;
+            border-radius: 15px;
+            max-width: 500px;
+        }
+        .lock {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 99, 3, 0.2);
+            color: #ff6303;
+            border: 1px solid #ff6303;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff6303;
+        }
+        p {
+            color: #888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff6303;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
-        .link:hover { background: #ff6303; color: #fff; }
+        .btn:hover {
+            background: #ff7b29;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">🔧</div>
-        <h1>ADDBOX Inventario</h1>
-        <div class="spinner"></div>
-        <p class="message">Cargando sistema de inventario...</p>
-        <a href="/admin/admin-dashboard/index.html" class="link">Ir al sistema</a>
+        <div class="lock">🔐</div>
+        <div class="badge">Acceso Restringido</div>
+        <h1>Portal Interno ADDBOX</h1>
+        <p>Sistema de inventario en configuración. Próximamente disponible para personal autorizado.</p>
+        <a href="https://www.addboxconstructora.com" class="btn">Volver al Sitio Web</a>
     </div>
 </body>
 </html>
