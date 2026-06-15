@@ -10,7 +10,7 @@ if (typeof window.supabase === 'undefined') {
   );
 }
 
-const SUPABASE_URL = "https://billwldqxupcavzurljo.supabase.co";
+const SUPABASE_URL = "https://spbsrrsgvkusscautcag.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJpbGx3bGRxeHVwY2F2enVybGpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyNDAzODIsImV4cCI6MjA5MTgxNjM4Mn0.4jsINbwwL9RMjKMdnQu-nYM7qBLb9KIXhEsuXQrEGO8";
 
 // Crear cliente usando la librería cargada por CDN
