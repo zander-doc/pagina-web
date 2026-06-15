@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ADDBOX — Acceso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS del login -->
+  <link rel="stylesheet" href="./assets/css/inicio-de-sesion.css">
+</head>
+
+<body>
+
+  <div class="auth-wrapper">
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="auth-card">
+
+      <!-- LOGO -->
+      <div class="auth-logo">
+        <img src="/admin-dashboard/assets/img/logo-addbox.png" alt="ADDBOX Logo" class="auth-logo-img">
+        <p class="brand-sub">Acceso Personal</p>
+      </div>
+
+
+      <!-- LOGIN -->
+      <div class="tab-content active" id="login">
+        <h2>Bienvenido de nuevo</h2>
+        <p class="subtitle">Ingresa tus credenciales</p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+          </div>
+
+          <div class="input-group password-group">
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <span class="toggle-password" data-target="loginPassword">👁️</span>
+          </div>
+
+          <div class="forgot-password">
+            <a href="/admin-dashboard/recuperar-key.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn-primary">Ingresar</button>
+        </form>
+
+        <p id="loginError" class="error"></p>
+        <div id="login-message" class="login-message"></div>
+
+        <div class="login-links">
+          <a href="/portal-autoservicio.html" class="back-link">← Volver al portal</a>
+        </div>
+      </div>
+
+    </div> <!-- auth-card -->
+
+  </div> <!-- auth-wrapper -->
+
+  <!-- Supabase v1 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+
+  <!-- Lógica del login -->
+  <script type="module" src="./modules/login/inicio-de-sesion.js"></script>
+
+  <!-- Check if first run and show installation link -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('/admin-dashboard/config/addbox-install.json')
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          return null;
+        })
+        .then(config => {
+          if (config && config.first_run === true) {
+            // Create installation link
+            const authCard = document.querySelector('.auth-card');
+            if (authCard) {
+              const installLink = document.createElement('a');
+              installLink.href = '/admin-dashboard/instalacion.html';
+              installLink.className = 'install-link';
+              installLink.textContent = '⚙️ Configuración inicial';
+              installLink.style.cssText = `
+                display: block;
+                text-align: center;
+                margin-top: 1.5rem;
+                color: #666;
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: color 0.2s;
+              `;
+              installLink.addEventListener('mouseover', function() {
+                installLink.style.color = '#2196F3';
+              });
+              installLink.addEventListener('mouseout', function() {
+                installLink.style.color = '#666';
+              });
+              authCard.appendChild(installLink);
+            }
+          }
+        })
+        .catch(() => {
+          // Config file doesn't exist, show installation link
+          const authCard = document.querySelector('.auth-card');
+          if (authCard) {
+            const installLink = document.createElement('a');
+            installLink.href = '/admin-dashboard/instalacion.html';
+            installLink.className = 'install-link';
+            installLink.textContent = '⚙️ Configuración inicial';
+            installLink.style.cssText = `
+              display: block;
+              text-align: center;
+              margin-top: 1.5rem;
+              color: #666;
+              text-decoration: none;
+              font-size: 0.9rem;
+              transition: color 0.2s;
+            `;
+            installLink.addEventListener('mouseover', function() {
+              installLink.style.color = '#2196F3';
+            });
+            installLink.addEventListener('mouseout', function() {
+              installLink.style.color = '#666';
+            });
+            authCard.appendChild(installLink);
+          }
+        });
+    });
+  </script>
+
+</body>
+</html>

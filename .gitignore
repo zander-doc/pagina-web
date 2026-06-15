@@ -1,4 +1,50 @@
-.env
+# Dependencias
 node_modules/
-package.json
-package-lock.json
+npm-debug.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+.env.development
+*.env
+
+# Archivos de build
+dist/
+build/
+.next/
+out/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Backups
+*_backup_*
+*.bak
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# Secrets
+*.key
+*.pem
+credentials.json
+
+# Admin analysis scripts
+admin/_analyze.ps1
+admin/_verify.ps1
+
+# Temp files
+admin/temp_*.json
