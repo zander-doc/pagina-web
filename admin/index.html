@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADDBOX - Sistema de Inventario</title>
+    <meta http-equiv="refresh" content="0; url=/admin/admin-dashboard/index.html">
+    <script>
+        window.location.href = '/admin/admin-dashboard/index.html';
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container { text-align: center; padding: 40px; }
+        .logo { font-size: 3rem; margin-bottom: 20px; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, #ff6303 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 99, 3, 0.2);
+            border-top-color: #ff6303;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 30px auto;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .message { color: #b0b0b0; font-size: 1.1rem; margin: 20px 0; }
+        .link {
+            color: #ff6303;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #ff6303;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .link:hover { background: #ff6303; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🔧</div>
+        <h1>ADDBOX Inventario</h1>
+        <div class="spinner"></div>
+        <p class="message">Cargando sistema de inventario...</p>
+        <a href="/admin/admin-dashboard/index.html" class="link">Ir al sistema</a>
+    </div>
+</body>
+</html>
