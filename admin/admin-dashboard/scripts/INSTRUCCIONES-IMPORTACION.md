@@ -13,7 +13,7 @@ admin-dashboard/data/CSV-COMPLETO.csv
 
 ### 2. Instalar dependencias
 ```bash
-cd d:\alexander\arte\addbox_a5grafic\Addbox\frontend\public\admin-dashboard\scripts
+cd d:\alexander\arte\addbox_a5grafic\Addbox\pagina web\admin\admin-dashboard\scripts
 npm install
 ```
 

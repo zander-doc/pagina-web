@@ -82,11 +82,12 @@
 
 body {
     padding-top: 140px;
+    overflow-x: hidden;
 }
 
 @media (max-width: 968px) {
     .header {
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .header-container {
@@ -94,27 +95,47 @@ body {
     }
 
     .header-logo {
-        padding: 10px 0;
+        padding: 8px 0;
+    }
+
+    .header-logo img {
+        height: 42px;
     }
 
     .header-nav {
         position: fixed;
-        top: 0;
+        top: 72px; /* Altura del header en móvil */
         right: -100%;
-        width: 260px;
-        height: 100vh;
-        background: #000;
-        padding: 80px 20px;
+        width: 280px;
+        height: calc(100vh - 72px);
+        background: rgba(0, 0, 0, 0.98);
+        padding: 30px 24px 20px;
         transition: 0.4s ease;
+        overflow-y: auto;
+        z-index: 999;
     }
 
     .header-nav ul {
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
+    }
+
+    .header-nav ul li a {
+        display: block;
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .header-nav ul li a:hover {
+        background: rgba(255, 99, 3, 0.12);
     }
 
     .hamburger {
         display: flex;
+        z-index: 1001;
+        position: relative;
     }
 
     .header-nav.active {
@@ -122,6 +143,63 @@ body {
     }
 
     body {
-        padding-top: 110px;
+        padding-top: 82px;
+    }
+}
+
+/* === MÓVIL PEQUEÑO (480px y menos) === */
+@media (max-width: 480px) {
+    .header {
+        padding: 12px 0;
+    }
+
+    .header-container {
+        padding: 0 16px;
+    }
+
+    .header-logo {
+        padding: 4px 0;
+    }
+
+    .header-logo img {
+        height: 36px;
+    }
+
+    .header-nav {
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding: 20px 16px;
+    }
+
+    .header-nav ul li a {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}
+
+/* === MÓVIL MUY PEQUEÑO (360px y menos - Galaxy S8+, etc.) === */
+@media (max-width: 380px) {
+    .header-logo img {
+        height: 32px;
+    }
+
+    .header-nav {
+        top: 56px;
+        height: calc(100vh - 56px);
+        padding: 16px 12px;
+    }
+
+    .header-nav ul li a {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    body {
+        padding-top: 66px;
     }
 }

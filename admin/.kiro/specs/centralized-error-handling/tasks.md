@@ -8,7 +8,7 @@ This implementation plan breaks down the centralized error handling system into 
 
 - [x] 1. Create error-handler.js module
   - [x] 1.1 Create `/services/error-handler.js` with basic structure
-    - Create the file at `d:\alexander\arte\addbox_a5grafic\Addbox\frontend\public\admin-dashboard\services\error-handler.js`
+    - Create the file at `d:\alexander\arte\addbox_a5grafic\Addbox\pagina web\admin\admin-dashboard\services\error-handler.js`
     - Add JSDoc header comment with module description
     - Export the `handleError` function
     - _Requirements: 1.1, 1.2, 1.3, 1.4_

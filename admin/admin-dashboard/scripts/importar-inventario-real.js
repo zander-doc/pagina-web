@@ -6,11 +6,11 @@
  * directamente a Supabase usando el Service Role Key.
  * 
  * USO (desde la carpeta del servidor de Alex que ya tiene las dependencias):
- *   cd d:\alexander\arte\addbox_a5grafic\Addbox\frontend\public\src\ai\alex\server
- *   node ../../../../../../admin-dashboard/scripts/importar-inventario-real.js
+ *   cd d:\alexander\arte\addbox_a5grafic\Addbox\pagina web\admin\src\ai\alex\server
+ *   node ../../../../scripts/importar-inventario-real.js
  * 
  * O ALTERNATIVA (instalar dependencia local):
- *   cd d:\alexander\arte\addbox_a5grafic\Addbox\frontend\public\admin-dashboard\scripts
+ *   cd d:\alexander\arte\addbox_a5grafic\Addbox\pagina web\admin\admin-dashboard\scripts
  *   npm init -y && npm install @supabase/supabase-js
  *   node importar-inventario-real.js
  * 
